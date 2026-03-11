@@ -85,6 +85,57 @@
     ]
   },
   {
+    "name": "Triage Finding",
+    "slug": "triage-finding",
+    "repo": "https://github.com/kiku-jw/triage-finding",
+    "tagline": "Turn an external finding into one honest verdict and next action.",
+    "focus": "Usefulness triage for links, repos, posts, and other findings",
+    "best_used_when": [
+      "You found a repo, article, post, screenshot, or video and need to know whether it matters now.",
+      "Novelty is easy to overvalue and you want a more honest filter.",
+      "A finding may deserve a skill, issue, note, or no action at all."
+    ],
+    "typical_prompts": [
+      "Triage this.",
+      "Look what I found.",
+      "Is this useful for us?"
+    ]
+  },
+  {
+    "name": "Tool Scout",
+    "slug": "tool-scout",
+    "repo": "https://github.com/kiku-jw/tool-scout",
+    "tagline": "Research current tools and recommend the best-fit options.",
+    "focus": "Build-vs-buy and ecosystem option research",
+    "best_used_when": [
+      "You need current tool options before spending engineering time or vendor budget.",
+      "The answer depends on what exists right now, not on memory.",
+      "You want a short list of strong candidates instead of a giant comparison dump."
+    ],
+    "typical_prompts": [
+      "Find tools for this.",
+      "What should we use for X?",
+      "Is there an MCP for this?"
+    ]
+  },
+  {
+    "name": "ADR Log",
+    "slug": "adr-log",
+    "repo": "https://github.com/kiku-jw/adr-log",
+    "tagline": "Record architecture decisions and trade-offs before reasoning disappears.",
+    "focus": "Durable architecture and execution decision capture",
+    "best_used_when": [
+      "A stack, schema, workflow, or vendor choice will be expensive to rediscover later.",
+      "You want trade-offs recorded in repo docs, issue state, or both.",
+      "A decision should stay visible even if it is later superseded."
+    ],
+    "typical_prompts": [
+      "Record this decision.",
+      "Write an ADR.",
+      "Log why we chose this."
+    ]
+  },
+  {
     "name": "Issue Control Loop",
     "slug": "issue-control-loop",
     "repo": "https://github.com/kiku-jw/issue-control-loop",
@@ -116,6 +167,40 @@
       "Keep continuity on this task.",
       "Update the ledger before we continue.",
       "Do not let this drift across sessions."
+    ]
+  },
+  {
+    "name": "Visual Explainer",
+    "slug": "visual-explainer",
+    "repo": "https://github.com/kiku-jw/visual-explainer",
+    "tagline": "Turn structure-heavy material into a clean self-contained HTML artifact.",
+    "focus": "Browser-readable HTML explainers for systems, tables, and timelines",
+    "best_used_when": [
+      "A diagram, system map, comparison, or wide table is clearer in a browser than in chat.",
+      "You want a shareable HTML artifact rather than a prose summary.",
+      "The main challenge is making structure visually legible."
+    ],
+    "typical_prompts": [
+      "Visualize this.",
+      "Make a diagram for this system.",
+      "Render this table as HTML."
+    ]
+  },
+  {
+    "name": "AI Writing Detox",
+    "slug": "ai-writing-detox",
+    "repo": "https://github.com/kiku-jw/ai-writing-detox",
+    "tagline": "Remove obvious AI-writing tics without flattening the real voice.",
+    "focus": "Cleanup pass for public-facing drafts",
+    "best_used_when": [
+      "A draft is directionally fine but sounds generically AI-written.",
+      "Public notes, posts, README copy, or build diaries need more trust and less stylistic fog.",
+      "You want a quick editing pass before publishing or committing docs."
+    ],
+    "typical_prompts": [
+      "Make this sound less AI.",
+      "Detox this draft.",
+      "Clean up this README copy."
     ]
   },
   {

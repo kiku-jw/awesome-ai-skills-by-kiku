@@ -19,8 +19,13 @@ Core build lane:
 Workflow extensions:
 
 - `Product Council` when one perspective is not enough and the risk is in blind spots.
+- `Triage Finding` when an external link, repo, screenshot, or post needs an honest usefulness verdict.
+- `Tool Scout` when build-vs-buy is open and current ecosystem research matters.
+- `ADR Log` when a decision deserves durable rationale and trade-off capture.
 - `Issue Control Loop` when GitHub should hold canonical task state and agent handoff.
 - `Continuity Ledger` when the task is long enough that chat memory will drift.
+- `Visual Explainer` when a browser-readable HTML artifact is clearer than chat prose.
+- `AI Writing Detox` when public-facing text needs credibility instead of generic LLM polish.
 - `Illustration Prompt` when vague image requests need structure, references, and generator-ready precision.
 - `README Generator` when a repo needs a truthful front page instead of internal-doc sprawl.
 - `Session to Post` when the work is done and needs a durable writeup.
@@ -34,8 +39,13 @@ Workflow extensions:
 | Product Shaping | Choosing the smallest useful product framework | The idea has some signal, but the next product decision is still unclear | [product-shaping-skill](https://github.com/kiku-jw/product-shaping-skill) |
 | Product Council | Stress-testing high-impact product decisions | The main risk is in blind spots, conflicting lenses, or a fuzzy go/no-go call | [product-council](https://github.com/kiku-jw/product-council) |
 | Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [agent-spec-bundle](https://github.com/kiku-jw/agent-spec-bundle) |
+| Triage Finding | Turning outside finds into actionable verdicts | You found a post, repo, article, screenshot, or video and need to know whether it matters now | [triage-finding](https://github.com/kiku-jw/triage-finding) |
+| Tool Scout | Researching the best-fit external tools | You want current options before building or buying the wrong thing | [tool-scout](https://github.com/kiku-jw/tool-scout) |
+| ADR Log | Capturing architecture decisions and trade-offs | A stack, schema, workflow, or vendor choice needs durable rationale | [adr-log](https://github.com/kiku-jw/adr-log) |
 | Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs durable issue state, deterministic handoff, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) |
 | Continuity Ledger | Keeping substantial work coherent across sessions | The work is long-running and chat memory is not a safe source of truth | [continuity-ledger-skill](https://github.com/kiku-jw/continuity-ledger-skill) |
+| Visual Explainer | Turning complex structure into readable HTML artifacts | A diagram, system map, timeline, or wide table is clearer in a browser than in chat | [visual-explainer](https://github.com/kiku-jw/visual-explainer) |
+| AI Writing Detox | Removing obvious AI-writing tics | A post, README, or public note needs to sound more human and more trustworthy | [ai-writing-detox](https://github.com/kiku-jw/ai-writing-detox) |
 | Illustration Prompt | Turning vague image ideas into structured prompts | You need a generator-ready image prompt, especially when references should shape the result | [illustration-prompt](https://github.com/kiku-jw/illustration-prompt) |
 | README Generator | Creating a human-first repo front page | A repo needs a clear README with real quick start, useful taxonomy, and less doc bloat | [readme-generator-skill](https://github.com/kiku-jw/readme-generator-skill) |
 | Session to Post | Turning real coding work into a durable draft | A meaningful coding session is done and you want a build diary, post seed, or end-of-session writeup from the real artifacts | [session-to-post](https://github.com/kiku-jw/session-to-post) |
@@ -139,6 +149,66 @@ Typical prompts:
 - `Add contracts, schema, and test plan.`
 - `Give me the minimum bundle I can hand to an agent.`
 
+### [Triage Finding](https://github.com/kiku-jw/triage-finding)
+
+Turn an external finding into one honest verdict and one useful next step.
+
+What it does:
+- inspects links, posts, repos, screenshots, and similar findings
+- explains the gist plainly
+- maps the finding to current work instead of rewarding novelty for its own sake
+- ends with `Apply now`, `Save for later`, or `Not relevant`
+
+Good use cases:
+- You found something online and need to know whether it matters to current projects.
+- A repo or post looks interesting, but the real question is whether it deserves action.
+- You want to decide whether a finding should become a skill, issue, note, or nothing.
+
+Typical prompts:
+- `Triage this.`
+- `Look what I found.`
+- `Is this useful for us?`
+
+### [Tool Scout](https://github.com/kiku-jw/tool-scout)
+
+Research the current tool landscape before building or buying the wrong thing.
+
+What it does:
+- searches current tools, services, MCP servers, APIs, models, and libraries
+- compares only the strongest candidates by fit and maturity
+- prioritizes official docs, repos, and pricing pages
+- ends with a concrete recommendation, not a bloated longlist
+
+Good use cases:
+- Build-vs-buy is genuinely open.
+- The tool ecosystem changes too quickly for memory-only recommendations.
+- You need current options before committing engineering time or vendor budget.
+
+Typical prompts:
+- `Find tools for this.`
+- `What should we use for X?`
+- `Is there an MCP for this?`
+
+### [ADR Log](https://github.com/kiku-jw/adr-log)
+
+Capture architecture decisions and their trade-offs before the reasoning disappears.
+
+What it does:
+- decides whether a choice is ADR-worthy
+- records context, alternatives, decision, consequences, and revisit conditions
+- routes the record to repo docs, GitHub issue state, or both
+- keeps superseded decisions visible instead of rewriting history
+
+Good use cases:
+- A stack, schema, workflow, or vendor decision will be expensive to rediscover later.
+- A task already has one canonical issue and still needs durable technical rationale.
+- You want future contributors to understand not only what won, but what lost and why.
+
+Typical prompts:
+- `Record this decision.`
+- `Write an ADR.`
+- `Log why we chose this.`
+
 ### [Issue Control Loop](https://github.com/kiku-jw/issue-control-loop)
 
 Turn one GitHub Issue into a clean human-agent control surface.
@@ -177,6 +247,46 @@ Typical prompts:
 - `Keep continuity on this task.`
 - `Update the ledger before we continue.`
 - `Do not let this drift across sessions.`
+
+### [Visual Explainer](https://github.com/kiku-jw/visual-explainer)
+
+Turn structure-heavy material into a self-contained HTML artifact that is easier to read in a browser than in chat.
+
+What it does:
+- chooses the right format for systems, flows, comparisons, timelines, and data-heavy summaries
+- generates one self-contained HTML file
+- uses clear visual hierarchy instead of generic dashboard sludge
+- includes starter templates for architecture, Mermaid flows, and comparison tables
+
+Good use cases:
+- A diagram or system map would explain the thing faster than prose.
+- A table is too wide or dense for terminal output.
+- You want a shareable visual artifact for architecture, planning, or analysis.
+
+Typical prompts:
+- `Visualize this.`
+- `Make a diagram for this system.`
+- `Render this table as HTML.`
+
+### [AI Writing Detox](https://github.com/kiku-jw/ai-writing-detox)
+
+Remove obvious AI-writing tics from drafts without flattening the real voice.
+
+What it does:
+- cuts empty hype, throat-clearing, and fake authority
+- smooths out artificial LLM rhythm
+- preserves meaning while making the text sound calmer and more human
+- works especially well for public posts, README copy, and build diaries
+
+Good use cases:
+- A draft is acceptable in substance but sounds generically AI-written.
+- Public-facing copy needs more trust and less stylistic fog.
+- You want a fast cleanup pass before publishing or committing docs.
+
+Typical prompts:
+- `Make this sound less AI.`
+- `Detox this draft.`
+- `Clean up this README copy.`
 
 ### [Illustration Prompt](https://github.com/kiku-jw/illustration-prompt)
 
@@ -245,8 +355,13 @@ Typical prompts:
 - Move to Product Shaping when there is signal, but the product decision is still fuzzy.
 - Add Product Council when the decision is high-impact and you need explicit multi-lens disagreement before committing.
 - Use Spec Bundle when implementation ambiguity becomes the main risk.
+- Use Triage Finding when outside material needs a verdict before it turns into noise.
+- Use Tool Scout when the decision depends on what currently exists in the ecosystem.
+- Use ADR Log when a real decision deserves durable trade-off capture.
 - Use Issue Control Loop when GitHub should become the durable human-agent control surface.
 - Add Continuity Ledger when the task is long enough that durable memory matters.
+- Use Visual Explainer when the structure is easier to read in a browser artifact than in prose.
+- Use AI Writing Detox when a draft is directionally fine but still sounds like generic model output.
 - Use Illustration Prompt when the real problem is visual direction and reference interpretation, not image generation itself.
 - Use README Generator when the repo needs a clear public entry point more than deeper internal docs.
 - Use Session to Post when the work is already real and you want a durable writeup from the session artifacts.
