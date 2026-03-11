@@ -287,5 +287,22 @@
       "Write a build diary from this diff and notes.",
       "Make an end-of-session writeup from today's work."
     ]
+  },
+  {
+    "name": "Video Builder",
+    "slug": "video-builder",
+    "repo": "https://github.com/kiku-jw/video-builder-skill",
+    "tagline": "Assemble narrated videos from scripts with ffmpeg and TTS.",
+    "focus": "Narrated video assembly with ffmpeg and edge-tts",
+    "best_used_when": [
+      "You need to turn a script into a narrated mp4 quickly.",
+      "You want line-level visual timing without manual video editing.",
+      "You need a reproducible pipeline from text and stills."
+    ],
+    "typical_prompts": [
+      "Build a short narrated video from this script.",
+      "Render a 2-minute explainer with edge-tts voiceover.",
+      "Assemble an mp4 from these lines and images."
+    ]
   }
 ]

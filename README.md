@@ -53,6 +53,7 @@ Workflow extensions:
 | Illustration Prompt | Turning vague image ideas into structured prompts | You need a generator-ready image prompt, especially when references should shape the result | [illustration-prompt](https://github.com/kiku-jw/illustration-prompt) |
 | README Generator | Creating a human-first repo front page | A repo needs a clear README with real quick start, useful taxonomy, and less doc bloat | [readme-generator-skill](https://github.com/kiku-jw/readme-generator-skill) |
 | Session to Post | Turning real coding work into a durable draft | A meaningful coding session is done and you want a build diary, post seed, or end-of-session writeup from the real artifacts | [session-to-post](https://github.com/kiku-jw/session-to-post) |
+| Video Builder | Assemble narrated videos from scripts | You need a repeatable pipeline to render a narrated mp4 with TTS and simple visuals | [video-builder-skill](https://github.com/kiku-jw/video-builder-skill) |
 
 ## Detailed Skill Notes
 
@@ -390,6 +391,25 @@ Typical prompts:
 - `Turn this session into a post draft.`
 - `Write a build diary from this diff and notes.`
 - `Make an end-of-session writeup from today's work.`
+
+### [Video Builder](https://github.com/kiku-jw/video-builder-skill)
+
+Turn a script into a narrated video without a full editor.
+
+What it does:
+- Generates per-line narration with TTS.
+- Renders simple frames and encodes an mp4 via ffmpeg.
+- Keeps the pipeline reproducible with a JSON spec.
+
+Good use cases:
+- You need a quick narrated explainer or concept video.
+- You want repeatable renders for voice and pacing iteration.
+- You need to build a video from text and stills without editing software.
+
+Typical prompts:
+- `Build a short narrated video from this script.`
+- `Render a 2-minute explainer with edge-tts voiceover.`
+- `Assemble an mp4 from these lines and images.`
 
 ## How to use this list
 
