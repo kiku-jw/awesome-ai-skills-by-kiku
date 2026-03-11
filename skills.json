@@ -102,6 +102,23 @@
     ]
   },
   {
+    "name": "README Generator",
+    "slug": "readme-generator",
+    "repo": "https://github.com/kiku-jw/readme-generator-skill",
+    "tagline": "Create or rewrite a human-first README without doc bloat.",
+    "focus": "README quality and public repo framing",
+    "best_used_when": [
+      "A repo needs a clearer public front page with a real quick start.",
+      "The current README is vague, stale, or reads like internal notes.",
+      "The project mixes multiple roles and needs explicit top-level taxonomy."
+    ],
+    "typical_prompts": [
+      "Write a README for this repo.",
+      "Rewrite this README to be clearer for outsiders.",
+      "Refresh the quick start and usage sections."
+    ]
+  },
+  {
     "name": "Session to Post",
     "slug": "session-to-post",
     "repo": "https://github.com/kiku-jw/session-to-post",

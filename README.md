@@ -20,6 +20,7 @@ Workflow extensions:
 
 - `Issue Control Loop` when GitHub should hold canonical task state and agent handoff.
 - `Continuity Ledger` when the task is long enough that chat memory will drift.
+- `README Generator` when a repo needs a truthful front page instead of internal-doc sprawl.
 - `Session to Post` when the work is done and needs a durable writeup.
 
 ## Public Skills
@@ -32,6 +33,7 @@ Workflow extensions:
 | Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [agent-spec-bundle](https://github.com/kiku-jw/agent-spec-bundle) |
 | Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs durable issue state, deterministic handoff, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) |
 | Continuity Ledger | Keeping substantial work coherent across sessions | The work is long-running and chat memory is not a safe source of truth | [continuity-ledger-skill](https://github.com/kiku-jw/continuity-ledger-skill) |
+| README Generator | Creating a human-first repo front page | A repo needs a clear README with real quick start, useful taxonomy, and less doc bloat | [readme-generator-skill](https://github.com/kiku-jw/readme-generator-skill) |
 | Session to Post | Turning real coding work into a durable draft | A meaningful coding session is done and you want a build diary, post seed, or end-of-session writeup from the real artifacts | [session-to-post](https://github.com/kiku-jw/session-to-post) |
 
 ## Detailed Skill Notes
@@ -152,6 +154,26 @@ Typical prompts:
 - `Update the ledger before we continue.`
 - `Do not let this drift across sessions.`
 
+### [README Generator](https://github.com/kiku-jw/readme-generator-skill)
+
+Create or rewrite a repo README as a truthful public front page instead of an internal dump.
+
+What it does:
+- reads the repo before drafting instead of templating blindly
+- identifies the repo type and chooses the smallest useful section set
+- keeps quick start, usage, and value proposition on the first screen
+- makes taxonomy explicit when a repo mixes tool, skill, library, app, or docs roles
+
+Good use cases:
+- The repo works, but the README is vague, stale, or overloaded.
+- You want an open-source front page that explains value before implementation detail.
+- The project contains multiple pieces and needs a clearer top-level framing.
+
+Typical prompts:
+- `Write a README for this repo.`
+- `Rewrite this README to be clearer for outsiders.`
+- `Refresh the quick start and usage sections.`
+
 ### [Session to Post](https://github.com/kiku-jw/session-to-post)
 
 Turn a finished coding session into a durable draft instead of leaving the lessons trapped in chat and diffs.
@@ -180,6 +202,7 @@ Typical prompts:
 - Use Spec Bundle when implementation ambiguity becomes the main risk.
 - Use Issue Control Loop when GitHub should become the durable human-agent control surface.
 - Add Continuity Ledger when the task is long enough that durable memory matters.
+- Use README Generator when the repo needs a clear public entry point more than deeper internal docs.
 - Use Session to Post when the work is already real and you want a durable writeup from the session artifacts.
 
 ## Machine-readable index
