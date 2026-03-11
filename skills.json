@@ -51,6 +51,23 @@
     ]
   },
   {
+    "name": "Product Council",
+    "slug": "product-council",
+    "repo": "https://github.com/kiku-jw/product-council",
+    "tagline": "Stress-test a product decision with explicit multi-lens councils.",
+    "focus": "High-impact product decisions with competing lenses",
+    "best_used_when": [
+      "The real risk is in blind spots rather than missing raw ideation.",
+      "You want structured disagreement before committing to a direction.",
+      "A wedge, roadmap, pricing, or go/no-go call needs more than one perspective."
+    ],
+    "typical_prompts": [
+      "Run a product council on this.",
+      "Help me choose the wedge.",
+      "Do a roadmap council."
+    ]
+  },
+  {
     "name": "Spec Bundle",
     "slug": "spec-bundle",
     "repo": "https://github.com/kiku-jw/agent-spec-bundle",

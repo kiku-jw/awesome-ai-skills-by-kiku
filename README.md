@@ -14,10 +14,11 @@ Most "prompt lists" are just snippets. These are operational skills: small, opin
 
 Core build lane:
 
-`Work Shaping -> Idea Validation -> Product Shaping -> Spec Bundle`
+`Work Shaping -> Idea Validation -> Product Shaping -> Product Council (if needed) -> Spec Bundle`
 
 Workflow extensions:
 
+- `Product Council` when one perspective is not enough and the risk is in blind spots.
 - `Issue Control Loop` when GitHub should hold canonical task state and agent handoff.
 - `Continuity Ledger` when the task is long enough that chat memory will drift.
 - `README Generator` when a repo needs a truthful front page instead of internal-doc sprawl.
@@ -30,6 +31,7 @@ Workflow extensions:
 | Work Shaping | Process calibration before coding | You need to decide how much process, tracking, architecture, or review the task deserves | [work-shaping-skill](https://github.com/kiku-jw/work-shaping-skill) |
 | Idea Validation | Turning ideas into honest validation briefs | The idea is still fuzzy and should not jump straight into a PRD or build | [idea-validation-skill](https://github.com/kiku-jw/idea-validation-skill) |
 | Product Shaping | Choosing the smallest useful product framework | The idea has some signal, but the next product decision is still unclear | [product-shaping-skill](https://github.com/kiku-jw/product-shaping-skill) |
+| Product Council | Stress-testing high-impact product decisions | The main risk is in blind spots, conflicting lenses, or a fuzzy go/no-go call | [product-council](https://github.com/kiku-jw/product-council) |
 | Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [agent-spec-bundle](https://github.com/kiku-jw/agent-spec-bundle) |
 | Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs durable issue state, deterministic handoff, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) |
 | Continuity Ledger | Keeping substantial work coherent across sessions | The work is long-running and chat memory is not a safe source of truth | [continuity-ledger-skill](https://github.com/kiku-jw/continuity-ledger-skill) |
@@ -95,6 +97,26 @@ Typical prompts:
 - `Shape the product side without overdoing process.`
 - `Which framework fits this decision best?`
 - `Map the risky assumptions and tell me the next lane.`
+
+### [Product Council](https://github.com/kiku-jw/product-council)
+
+Stress-test a product decision with explicit lenses instead of fake personality roleplay.
+
+What it does:
+- runs a multi-lens council when one smart answer is not enough
+- uses named roles with clear optimization targets, fears, and evidence preferences
+- supports decision-shaped councils for wedge, GTM, roadmap, pricing, and go/no-go
+- ends with consensus, disagreements, hidden assumptions, and one recommendation
+
+Good use cases:
+- A product decision is high-impact enough that blind spots matter.
+- You want structured disagreement before committing to a direction.
+- A normal strategy discussion feels too linear and is missing competing lenses.
+
+Typical prompts:
+- `Run a product council on this.`
+- `Help me choose the wedge.`
+- `Do a roadmap council.`
 
 ### [Spec Bundle](https://github.com/kiku-jw/agent-spec-bundle)
 
@@ -199,6 +221,7 @@ Typical prompts:
 - Start with Work Shaping if the real blocker is not code but the shape of the work.
 - Use Idea Validation before writing a PRD for a raw product concept.
 - Move to Product Shaping when there is signal, but the product decision is still fuzzy.
+- Add Product Council when the decision is high-impact and you need explicit multi-lens disagreement before committing.
 - Use Spec Bundle when implementation ambiguity becomes the main risk.
 - Use Issue Control Loop when GitHub should become the durable human-agent control surface.
 - Add Continuity Ledger when the task is long enough that durable memory matters.
