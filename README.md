@@ -4,7 +4,7 @@
 
 A curated list of public AI workflow skills created by Kiku.
 
-These skills are built for agent-assisted product work: shaping ideas, reducing execution ambiguity, and keeping long-running tasks coherent. This list intentionally includes only public repositories. Private and internal skills are not listed here.
+These skills are built for agent-assisted product work: shaping ideas, controlling execution through durable surfaces, reducing ambiguity, and turning real work into durable outputs. This list intentionally includes only public repositories. Private and internal skills are not listed here.
 
 ## Why this list exists
 
@@ -12,9 +12,15 @@ Most "prompt lists" are just snippets. These are operational skills: small, opin
 
 ## Skill Map
 
-`Work Shaping -> Idea Validation -> Product Shaping -> Spec Bundle -> Continuity Ledger`
+Core build lane:
 
-Use this sequence when a raw idea needs to become an implementation-ready piece of work without falling into PM theater or vague chat memory.
+`Work Shaping -> Idea Validation -> Product Shaping -> Spec Bundle`
+
+Workflow extensions:
+
+- `Issue Control Loop` when GitHub should hold canonical task state and agent handoff.
+- `Continuity Ledger` when the task is long enough that chat memory will drift.
+- `Session to Post` when the work is done and needs a durable writeup.
 
 ## Public Skills
 
@@ -23,8 +29,10 @@ Use this sequence when a raw idea needs to become an implementation-ready piece 
 | Work Shaping | Process calibration before coding | You need to decide how much process, tracking, architecture, or review the task deserves | [work-shaping-skill](https://github.com/kiku-jw/work-shaping-skill) |
 | Idea Validation | Turning ideas into honest validation briefs | The idea is still fuzzy and should not jump straight into a PRD or build | [idea-validation-skill](https://github.com/kiku-jw/idea-validation-skill) |
 | Product Shaping | Choosing the smallest useful product framework | The idea has some signal, but the next product decision is still unclear | [product-shaping-skill](https://github.com/kiku-jw/product-shaping-skill) |
-| Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [spec-bundle-skill](https://github.com/kiku-jw/spec-bundle-skill) |
+| Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [agent-spec-bundle](https://github.com/kiku-jw/agent-spec-bundle) |
+| Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs durable issue state, deterministic handoff, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) |
 | Continuity Ledger | Keeping substantial work coherent across sessions | The work is long-running and chat memory is not a safe source of truth | [continuity-ledger-skill](https://github.com/kiku-jw/continuity-ledger-skill) |
+| Session to Post | Turning real coding work into a durable draft | A meaningful coding session is done and you want a build diary, post seed, or end-of-session writeup from the real artifacts | [session-to-post](https://github.com/kiku-jw/session-to-post) |
 
 ## Detailed Skill Notes
 
@@ -86,7 +94,7 @@ Typical prompts:
 - `Which framework fits this decision best?`
 - `Map the risky assumptions and tell me the next lane.`
 
-### [Spec Bundle](https://github.com/kiku-jw/spec-bundle-skill)
+### [Spec Bundle](https://github.com/kiku-jw/agent-spec-bundle)
 
 Build an implementation-ready spec bundle when a plain PRD is too soft.
 
@@ -104,6 +112,26 @@ Typical prompts:
 - `Turn this PRD into an implementation-ready spec bundle.`
 - `Add contracts, schema, and test plan.`
 - `Give me the minimum bundle I can hand to an agent.`
+
+### [Issue Control Loop](https://github.com/kiku-jw/issue-control-loop)
+
+Turn one GitHub Issue into a clean human-agent control surface.
+
+What it does:
+- keeps the issue canonical instead of letting task state dissolve into chat
+- makes machine state explicit via marker comments and deterministic parsing
+- includes PRD intake and work-shaping primitives so the issue can become a clean handoff point
+- keeps Projects as the board lens instead of duplicating canonical task meaning
+
+Good use cases:
+- You want GitHub Issue plus Project to become the real control layer for execution.
+- A task needs a durable handoff between planning, coding, review, and operator oversight.
+- You want explicit machine-readable state instead of vague workflow updates.
+
+Typical prompts:
+- `Turn this GitHub issue into a clean control loop.`
+- `Use the issue as the canonical handoff surface.`
+- `Parse this PRD and make it issue-ready.`
 
 ### [Continuity Ledger](https://github.com/kiku-jw/continuity-ledger-skill)
 
@@ -124,13 +152,35 @@ Typical prompts:
 - `Update the ledger before we continue.`
 - `Do not let this drift across sessions.`
 
+### [Session to Post](https://github.com/kiku-jw/session-to-post)
+
+Turn a finished coding session into a durable draft instead of leaving the lessons trapped in chat and diffs.
+
+What it does:
+- turns a repo diff, saved patch, notes, or transcript into a readable development diary draft
+- runs writer, critic, and editor passes so the result is shaped before you publish or file it away
+- keeps the story anchored to decisions, failures, and pivots instead of file tours
+- can hand the final artifact to another system with a post-save hook
+
+Good use cases:
+- The coding session is done and you want a build diary, public-safe post seed, or durable internal writeup.
+- The real story lives across diff, notes, and transcript, and rewriting it manually would kill the momentum.
+- You want end-of-session capture to be callable in plain language instead of only by remembering a CLI command.
+
+Typical prompts:
+- `Turn this session into a post draft.`
+- `Write a build diary from this diff and notes.`
+- `Make an end-of-session writeup from today's work.`
+
 ## How to use this list
 
 - Start with Work Shaping if the real blocker is not code but the shape of the work.
 - Use Idea Validation before writing a PRD for a raw product concept.
 - Move to Product Shaping when there is signal, but the product decision is still fuzzy.
 - Use Spec Bundle when implementation ambiguity becomes the main risk.
+- Use Issue Control Loop when GitHub should become the durable human-agent control surface.
 - Add Continuity Ledger when the task is long enough that durable memory matters.
+- Use Session to Post when the work is already real and you want a durable writeup from the session artifacts.
 
 ## Machine-readable index
 

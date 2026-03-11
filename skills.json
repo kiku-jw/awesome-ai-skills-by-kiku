@@ -53,7 +53,7 @@
   {
     "name": "Spec Bundle",
     "slug": "spec-bundle",
-    "repo": "https://github.com/kiku-jw/spec-bundle-skill",
+    "repo": "https://github.com/kiku-jw/agent-spec-bundle",
     "tagline": "Build an implementation-ready bundle when a PRD is not enough.",
     "focus": "Execution-ready spec artifacts",
     "best_used_when": [
@@ -65,6 +65,23 @@
       "Turn this PRD into an implementation-ready spec bundle.",
       "Add contracts, schema, and test plan.",
       "Give me the minimum bundle I can hand to an agent."
+    ]
+  },
+  {
+    "name": "Issue Control Loop",
+    "slug": "issue-control-loop",
+    "repo": "https://github.com/kiku-jw/issue-control-loop",
+    "tagline": "Keep one GitHub Issue canonical for humans and agents.",
+    "focus": "Canonical issue-driven workflow control",
+    "best_used_when": [
+      "Work needs durable issue state and explicit handoff points.",
+      "You want machine-readable control state instead of vague chat status.",
+      "GitHub Issue and Project should become the real operator surface."
+    ],
+    "typical_prompts": [
+      "Turn this GitHub issue into a clean control loop.",
+      "Use the issue as the canonical handoff surface.",
+      "Parse this PRD and make it issue-ready."
     ]
   },
   {
@@ -82,6 +99,23 @@
       "Keep continuity on this task.",
       "Update the ledger before we continue.",
       "Do not let this drift across sessions."
+    ]
+  },
+  {
+    "name": "Session to Post",
+    "slug": "session-to-post",
+    "repo": "https://github.com/kiku-jw/session-to-post",
+    "tagline": "Turn a finished coding session into a durable draft.",
+    "focus": "End-of-session writing from real artifacts",
+    "best_used_when": [
+      "A meaningful coding session is done and you want a build diary or post seed.",
+      "The story lives across diff, notes, and transcript and should not be rewritten manually.",
+      "You want end-of-session capture to be callable in plain language instead of only by CLI."
+    ],
+    "typical_prompts": [
+      "Turn this session into a post draft.",
+      "Write a build diary from this diff and notes.",
+      "Make an end-of-session writeup from today's work."
     ]
   }
 ]
