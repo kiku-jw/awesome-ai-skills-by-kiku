@@ -22,10 +22,12 @@ Workflow extensions:
 - `Triage Finding` when an external link, repo, screenshot, or post needs an honest usefulness verdict.
 - `Tool Scout` when build-vs-buy is open and current ecosystem research matters.
 - `ADR Log` when a decision deserves durable rationale and trade-off capture.
+- `GitHub Mobile Ops` when you want a phone-first GitHub control surface.
 - `Issue Control Loop` when GitHub should hold canonical task state and agent handoff.
 - `Continuity Ledger` when the task is long enough that chat memory will drift.
 - `Visual Explainer` when a browser-readable HTML artifact is clearer than chat prose.
 - `AI Writing Detox` when public-facing text needs credibility instead of generic LLM polish.
+- `Public Artifact Lane` when real work should become a public-ready artifact.
 - `Illustration Prompt` when vague image requests need structure, references, and generator-ready precision.
 - `README Generator` when a repo needs a truthful front page instead of internal-doc sprawl.
 - `Session to Post` when the work is done and needs a durable writeup.
@@ -42,10 +44,12 @@ Workflow extensions:
 | Triage Finding | Turning outside finds into actionable verdicts | You found a post, repo, article, screenshot, or video and need to know whether it matters now | [triage-finding](https://github.com/kiku-jw/triage-finding) |
 | Tool Scout | Researching the best-fit external tools | You want current options before building or buying the wrong thing | [tool-scout](https://github.com/kiku-jw/tool-scout) |
 | ADR Log | Capturing architecture decisions and trade-offs | A stack, schema, workflow, or vendor choice needs durable rationale | [adr-log](https://github.com/kiku-jw/adr-log) |
+| GitHub Mobile Ops | Phone-first GitHub control workflows | You want Issues as canonical state, Projects as operator view, and GitHub Mobile as control surface | [github-mobile-ops](https://github.com/kiku-jw/github-mobile-ops) |
 | Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs durable issue state, deterministic handoff, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) |
 | Continuity Ledger | Keeping substantial work coherent across sessions | The work is long-running and chat memory is not a safe source of truth | [continuity-ledger-skill](https://github.com/kiku-jw/continuity-ledger-skill) |
 | Visual Explainer | Turning complex structure into readable HTML artifacts | A diagram, system map, timeline, or wide table is clearer in a browser than in chat | [visual-explainer](https://github.com/kiku-jw/visual-explainer) |
 | AI Writing Detox | Removing obvious AI-writing tics | A post, README, or public note needs to sound more human and more trustworthy | [ai-writing-detox](https://github.com/kiku-jw/ai-writing-detox) |
+| Public Artifact Lane | Turning real work into public-ready artifacts | You need a build diary, release notes, launch post, or case study from real work | [public-artifact-lane](https://github.com/kiku-jw/public-artifact-lane) |
 | Illustration Prompt | Turning vague image ideas into structured prompts | You need a generator-ready image prompt, especially when references should shape the result | [illustration-prompt](https://github.com/kiku-jw/illustration-prompt) |
 | README Generator | Creating a human-first repo front page | A repo needs a clear README with real quick start, useful taxonomy, and less doc bloat | [readme-generator-skill](https://github.com/kiku-jw/readme-generator-skill) |
 | Session to Post | Turning real coding work into a durable draft | A meaningful coding session is done and you want a build diary, post seed, or end-of-session writeup from the real artifacts | [session-to-post](https://github.com/kiku-jw/session-to-post) |
@@ -209,6 +213,25 @@ Typical prompts:
 - `Write an ADR.`
 - `Log why we chose this.`
 
+### [GitHub Mobile Ops](https://github.com/kiku-jw/github-mobile-ops)
+
+Design a phone-first GitHub control surface without pretending the phone replaces the laptop.
+
+What it does:
+- clarifies the split: Issues for canonical state, Projects for operator view, Mobile for oversight and nudges
+- recommends a minimal project field set for phone scanning
+- keeps the workflow honest and reversible
+
+Good use cases:
+- You want to manage tasks from GitHub Mobile without losing canonical state.
+- You need a clear operator board that works on a small screen.
+- You want to understand how Copilot-on-GitHub and Projects fit in.
+
+Typical prompts:
+- `I want a phone-first GitHub workflow.`
+- `How should GitHub Mobile fit into our control surface?`
+- `Can GitHub Projects be the operator board?`
+
 ### [Issue Control Loop](https://github.com/kiku-jw/issue-control-loop)
 
 Turn one GitHub Issue into a clean human-agent control surface.
@@ -288,6 +311,26 @@ Typical prompts:
 - `Detox this draft.`
 - `Clean up this README copy.`
 
+### [Public Artifact Lane](https://github.com/kiku-jw/public-artifact-lane)
+
+Turn real work into a public-ready artifact with evidence-first framing.
+
+What it does:
+- chooses the right artifact type for the moment
+- drafts build diaries, release notes, launch posts, case studies, or demo scripts
+- keeps the first screen useful and concrete
+- avoids inventing results or leaking private details
+
+Good use cases:
+- You finished real work and want a public artifact instead of leaving it in chat.
+- You need release notes or a launch writeup grounded in actual changes.
+- You want a case study draft based on real evidence and decisions.
+
+Typical prompts:
+- `Write a build diary from this work.`
+- `Make release notes.`
+- `Prepare a launch writeup.`
+
 ### [Illustration Prompt](https://github.com/kiku-jw/illustration-prompt)
 
 Turn vague image requests and reference sets into precise generator-ready prompts.
@@ -358,10 +401,12 @@ Typical prompts:
 - Use Triage Finding when outside material needs a verdict before it turns into noise.
 - Use Tool Scout when the decision depends on what currently exists in the ecosystem.
 - Use ADR Log when a real decision deserves durable trade-off capture.
+- Use GitHub Mobile Ops when you want a phone-first control surface without losing canonical state.
 - Use Issue Control Loop when GitHub should become the durable human-agent control surface.
 - Add Continuity Ledger when the task is long enough that durable memory matters.
 - Use Visual Explainer when the structure is easier to read in a browser artifact than in prose.
 - Use AI Writing Detox when a draft is directionally fine but still sounds like generic model output.
+- Use Public Artifact Lane when real work should become a public-ready artifact.
 - Use Illustration Prompt when the real problem is visual direction and reference interpretation, not image generation itself.
 - Use README Generator when the repo needs a clear public entry point more than deeper internal docs.
 - Use Session to Post when the work is already real and you want a durable writeup from the session artifacts.
