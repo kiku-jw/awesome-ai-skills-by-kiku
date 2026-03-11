@@ -119,6 +119,23 @@
     ]
   },
   {
+    "name": "Illustration Prompt",
+    "slug": "illustration-prompt",
+    "repo": "https://github.com/kiku-jw/illustration-prompt",
+    "tagline": "Turn vague image ideas and refs into precise generator-ready prompts.",
+    "focus": "Visual direction and prompt structuring for image generation",
+    "best_used_when": [
+      "You need a prompt for a hero image, card visual, cover, or campaign illustration.",
+      "Reference images should shape the result, but the user has not translated them into a precise brief.",
+      "The visual request is still too vague for reliable image generation."
+    ],
+    "typical_prompts": [
+      "Write an illustration prompt.",
+      "Help me make an image prompt from these refs.",
+      "Turn this vague idea into a Midjourney prompt."
+    ]
+  },
+  {
     "name": "README Generator",
     "slug": "readme-generator",
     "repo": "https://github.com/kiku-jw/readme-generator-skill",

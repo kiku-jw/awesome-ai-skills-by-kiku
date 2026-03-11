@@ -21,6 +21,7 @@ Workflow extensions:
 - `Product Council` when one perspective is not enough and the risk is in blind spots.
 - `Issue Control Loop` when GitHub should hold canonical task state and agent handoff.
 - `Continuity Ledger` when the task is long enough that chat memory will drift.
+- `Illustration Prompt` when vague image requests need structure, references, and generator-ready precision.
 - `README Generator` when a repo needs a truthful front page instead of internal-doc sprawl.
 - `Session to Post` when the work is done and needs a durable writeup.
 
@@ -35,6 +36,7 @@ Workflow extensions:
 | Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [agent-spec-bundle](https://github.com/kiku-jw/agent-spec-bundle) |
 | Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs durable issue state, deterministic handoff, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) |
 | Continuity Ledger | Keeping substantial work coherent across sessions | The work is long-running and chat memory is not a safe source of truth | [continuity-ledger-skill](https://github.com/kiku-jw/continuity-ledger-skill) |
+| Illustration Prompt | Turning vague image ideas into structured prompts | You need a generator-ready image prompt, especially when references should shape the result | [illustration-prompt](https://github.com/kiku-jw/illustration-prompt) |
 | README Generator | Creating a human-first repo front page | A repo needs a clear README with real quick start, useful taxonomy, and less doc bloat | [readme-generator-skill](https://github.com/kiku-jw/readme-generator-skill) |
 | Session to Post | Turning real coding work into a durable draft | A meaningful coding session is done and you want a build diary, post seed, or end-of-session writeup from the real artifacts | [session-to-post](https://github.com/kiku-jw/session-to-post) |
 
@@ -176,6 +178,26 @@ Typical prompts:
 - `Update the ledger before we continue.`
 - `Do not let this drift across sessions.`
 
+### [Illustration Prompt](https://github.com/kiku-jw/illustration-prompt)
+
+Turn vague image requests and reference sets into precise generator-ready prompts.
+
+What it does:
+- runs a 6-step interview covering context, style, references, scene, palette, and format
+- works especially well when reference images need to shape the final prompt
+- outputs a structured English prompt with scene, style, colors, atmosphere, format, and negative constraints
+- supports iterative refinement by editing blocks instead of restarting from zero
+
+Good use cases:
+- You need a hero image, card visual, cover illustration, or campaign visual prompt.
+- The user has references but cannot yet describe what should be borrowed from them.
+- The visual brief is vague and needs to become generator-ready before image creation.
+
+Typical prompts:
+- `Write an illustration prompt.`
+- `Help me make an image prompt from these refs.`
+- `Turn this vague idea into a Midjourney prompt.`
+
 ### [README Generator](https://github.com/kiku-jw/readme-generator-skill)
 
 Create or rewrite a repo README as a truthful public front page instead of an internal dump.
@@ -225,6 +247,7 @@ Typical prompts:
 - Use Spec Bundle when implementation ambiguity becomes the main risk.
 - Use Issue Control Loop when GitHub should become the durable human-agent control surface.
 - Add Continuity Ledger when the task is long enough that durable memory matters.
+- Use Illustration Prompt when the real problem is visual direction and reference interpretation, not image generation itself.
 - Use README Generator when the repo needs a clear public entry point more than deeper internal docs.
 - Use Session to Post when the work is already real and you want a durable writeup from the session artifacts.
 
