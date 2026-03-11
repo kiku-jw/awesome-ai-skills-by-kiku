@@ -22,7 +22,6 @@ Workflow extensions:
 - `Triage Finding` when an external link, repo, screenshot, or post needs an honest usefulness verdict.
 - `Tool Scout` when build-vs-buy is open and current ecosystem research matters.
 - `ADR Log` when a decision deserves durable rationale and trade-off capture.
-- `GitHub Mobile Ops` when you want a phone-first GitHub control surface.
 - `Issue Control Loop` when GitHub should hold canonical task state and agent handoff.
 - `Continuity Ledger` when the task is long enough that chat memory will drift.
 - `Visual Explainer` when a browser-readable HTML artifact is clearer than chat prose.
@@ -44,7 +43,6 @@ Workflow extensions:
 | Triage Finding | Turning outside finds into actionable verdicts | You found a post, repo, article, screenshot, or video and need to know whether it matters now | [triage-finding](https://github.com/kiku-jw/triage-finding) |
 | Tool Scout | Researching the best-fit external tools | You want current options before building or buying the wrong thing | [tool-scout](https://github.com/kiku-jw/tool-scout) |
 | ADR Log | Capturing architecture decisions and trade-offs | A stack, schema, workflow, or vendor choice needs durable rationale | [adr-log](https://github.com/kiku-jw/adr-log) |
-| GitHub Mobile Ops | Phone-first GitHub control workflows | You want Issues as canonical state, Projects as operator view, and GitHub Mobile as control surface | [github-mobile-ops](https://github.com/kiku-jw/github-mobile-ops) |
 | Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs durable issue state, deterministic handoff, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) |
 | Continuity Ledger | Keeping substantial work coherent across sessions | The work is long-running and chat memory is not a safe source of truth | [continuity-ledger-skill](https://github.com/kiku-jw/continuity-ledger-skill) |
 | Visual Explainer | Turning complex structure into readable HTML artifacts | A diagram, system map, timeline, or wide table is clearer in a browser than in chat | [visual-explainer](https://github.com/kiku-jw/visual-explainer) |
@@ -213,25 +211,6 @@ Typical prompts:
 - `Record this decision.`
 - `Write an ADR.`
 - `Log why we chose this.`
-
-### [GitHub Mobile Ops](https://github.com/kiku-jw/github-mobile-ops)
-
-Design a phone-first GitHub control surface without pretending the phone replaces the laptop.
-
-What it does:
-- clarifies the split: Issues for canonical state, Projects for operator view, Mobile for oversight and nudges
-- recommends a minimal project field set for phone scanning
-- keeps the workflow honest and reversible
-
-Good use cases:
-- You want to manage tasks from GitHub Mobile without losing canonical state.
-- You need a clear operator board that works on a small screen.
-- You want to understand how Copilot-on-GitHub and Projects fit in.
-
-Typical prompts:
-- `I want a phone-first GitHub workflow.`
-- `How should GitHub Mobile fit into our control surface?`
-- `Can GitHub Projects be the operator board?`
 
 ### [Issue Control Loop](https://github.com/kiku-jw/issue-control-loop)
 
@@ -421,7 +400,6 @@ Typical prompts:
 - Use Triage Finding when outside material needs a verdict before it turns into noise.
 - Use Tool Scout when the decision depends on what currently exists in the ecosystem.
 - Use ADR Log when a real decision deserves durable trade-off capture.
-- Use GitHub Mobile Ops when you want a phone-first control surface without losing canonical state.
 - Use Issue Control Loop when GitHub should become the durable human-agent control surface.
 - Add Continuity Ledger when the task is long enough that durable memory matters.
 - Use Visual Explainer when the structure is easier to read in a browser artifact than in prose.

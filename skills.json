@@ -136,23 +136,6 @@
     ]
   },
   {
-    "name": "GitHub Mobile Ops",
-    "slug": "github-mobile-ops",
-    "repo": "https://github.com/kiku-jw/github-mobile-ops",
-    "tagline": "Design phone-first GitHub control workflows with clear canonical state.",
-    "focus": "Phone-first GitHub workflow design",
-    "best_used_when": [
-      "You want Issues as canonical state, Projects as operator view, and GitHub Mobile as control surface.",
-      "You need a workflow that works on a phone without losing task integrity.",
-      "You want a minimal project field set optimized for mobile scanning."
-    ],
-    "typical_prompts": [
-      "I want a phone-first GitHub workflow.",
-      "How should GitHub Mobile fit into our control surface?",
-      "Can GitHub Projects be the operator board?"
-    ]
-  },
-  {
     "name": "Issue Control Loop",
     "slug": "issue-control-loop",
     "repo": "https://github.com/kiku-jw/issue-control-loop",
