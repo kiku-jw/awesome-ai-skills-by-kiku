@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Work Shaping",
+    "slug": "work-shaping",
+    "repo": "https://github.com/kiku-jw/work-shaping-skill",
+    "tagline": "Choose the smallest honest amount of process before coding.",
+    "focus": "Process calibration before coding",
+    "best_used_when": [
+      "You need to decide whether a task is tiny or substantial.",
+      "You need to choose between chat, a local note, or a GitHub issue.",
+      "You want to make architecture, review, or public-writing lanes explicit."
+    ],
+    "typical_prompts": [
+      "Is this a tiny task or substantial work?",
+      "Should this go into GitHub or stay in chat?",
+      "Do we need a checklist, an execution brief, or a full architecture pack?"
+    ]
+  },
+  {
+    "name": "Idea Validation",
+    "slug": "idea-validation",
+    "repo": "https://github.com/kiku-jw/idea-validation-skill",
+    "tagline": "Turn a raw product idea into a lean validation brief.",
+    "focus": "Idea validation before PRD or implementation",
+    "best_used_when": [
+      "The idea is interesting but still fuzzy.",
+      "You need a named buyer, pain, wedge, and proof path.",
+      "You want to test demand before turning the idea into a build order."
+    ],
+    "typical_prompts": [
+      "Validate this idea before we build it.",
+      "Who is the buyer and what painful recurring job are we removing?",
+      "What is the smallest wedge and the fastest proof path?"
+    ]
+  },
+  {
+    "name": "Product Shaping",
+    "slug": "product-shaping",
+    "repo": "https://github.com/kiku-jw/product-shaping-skill",
+    "tagline": "Use the smallest product framework that resolves the next decision.",
+    "focus": "Product framing after basic validation",
+    "best_used_when": [
+      "The idea has some signal, but strategy or positioning is still fuzzy.",
+      "You need to surface risky assumptions or choose experiments.",
+      "You want a concrete next lane instead of generic PM discussion."
+    ],
+    "typical_prompts": [
+      "Shape the product side without overdoing process.",
+      "Which framework fits this decision best?",
+      "Map the risky assumptions and tell me the next lane."
+    ]
+  },
+  {
+    "name": "Spec Bundle",
+    "slug": "spec-bundle",
+    "repo": "https://github.com/kiku-jw/spec-bundle-skill",
+    "tagline": "Build an implementation-ready bundle when a PRD is not enough.",
+    "focus": "Execution-ready spec artifacts",
+    "best_used_when": [
+      "Execution needs contracts, schema, tests, or architecture artifacts.",
+      "The build crosses subsystems or has important invariants.",
+      "A plain PRD would leave too much room for ambiguity."
+    ],
+    "typical_prompts": [
+      "Turn this PRD into an implementation-ready spec bundle.",
+      "Add contracts, schema, and test plan.",
+      "Give me the minimum bundle I can hand to an agent."
+    ]
+  },
+  {
+    "name": "Continuity Ledger",
+    "slug": "continuity-ledger",
+    "repo": "https://github.com/kiku-jw/continuity-ledger-skill",
+    "tagline": "Keep substantial work coherent with a factual CONTINUITY.md.",
+    "focus": "Durable continuity across long-running work",
+    "best_used_when": [
+      "The task will span sessions, branches, or long tool loops.",
+      "Chat memory is not a safe source of truth.",
+      "You need one short durable bridge between source artifacts and current state."
+    ],
+    "typical_prompts": [
+      "Keep continuity on this task.",
+      "Update the ledger before we continue.",
+      "Do not let this drift across sessions."
+    ]
+  }
+]
