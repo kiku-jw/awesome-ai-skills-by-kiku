@@ -14,7 +14,7 @@ Most "prompt lists" are just snippets. These are operational skills: small, opin
 
 Core build lane:
 
-`Work Shaping -> Idea Validation -> Product Shaping -> Product Council (if needed) -> Spec Bundle`
+`Work Shaping -> Idea Validation -> Product Shaping -> Product Council (if needed) -> Spec Bundle -> Execution Pack`
 
 Workflow extensions:
 
@@ -22,6 +22,7 @@ Workflow extensions:
 - `Triage Finding` when an external link, repo, screenshot, or post needs an honest usefulness verdict.
 - `Tool Scout` when build-vs-buy is open and current ecosystem research matters.
 - `ADR Log` when a decision deserves durable rationale and trade-off capture.
+- `Execution Pack` when Codex needs AGENTS, plan, status, tests, backlog, and resumable prompts instead of a loose spec.
 - `Issue Control Loop` when GitHub should hold canonical task state and agent handoff.
 - `Continuity Ledger` when the task is long enough that chat memory will drift.
 - `Visual Explainer` when a browser-readable HTML artifact is clearer than chat prose.
@@ -40,6 +41,7 @@ Workflow extensions:
 | Product Shaping | Choosing the smallest useful product framework | The idea has some signal, but the next product decision is still unclear | [product-shaping-skill](https://github.com/kiku-jw/product-shaping-skill) |
 | Product Council | Stress-testing high-impact product decisions | The main risk is in blind spots, conflicting lenses, or a fuzzy go/no-go call | [product-council](https://github.com/kiku-jw/product-council) |
 | Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [agent-spec-bundle](https://github.com/kiku-jw/agent-spec-bundle) |
+| Execution Pack | Turning a PRD into a durable Codex operating pack | Codex needs AGENTS.md, plan, status, tests, backlog, and reusable execution prompts for multi-session work | [codex-execution-pack](https://github.com/kiku-jw/codex-execution-pack) |
 | Triage Finding | Turning outside finds into actionable verdicts | You found a post, repo, article, screenshot, or video and need to know whether it matters now | [triage-finding](https://github.com/kiku-jw/triage-finding) |
 | Tool Scout | Researching the best-fit external tools | You want current options before building or buying the wrong thing | [tool-scout](https://github.com/kiku-jw/tool-scout) |
 | ADR Log | Capturing architecture decisions and trade-offs | A stack, schema, workflow, or vendor choice needs durable rationale | [adr-log](https://github.com/kiku-jw/adr-log) |
@@ -151,6 +153,25 @@ Typical prompts:
 - `Turn this PRD into an implementation-ready spec bundle.`
 - `Add contracts, schema, and test plan.`
 - `Give me the minimum bundle I can hand to an agent.`
+
+### [Execution Pack](https://github.com/kiku-jw/codex-execution-pack)
+
+Turn a PRD or raw brief into a durable Codex operating pack.
+
+What it does:
+- scaffolds `AGENTS.md`, `docs/PLAN.md`, `docs/STATUS.md`, `docs/TEST_PLAN.md`, and `docs/BACKLOG.md`
+- adds reusable prompt surfaces for execution, resume, review-repair, and blocker compression
+- optionally includes a `spec/` companion when contracts, schema, or architecture gates matter
+
+Good use cases:
+- A large task needs resumable repo state instead of relying on chat memory.
+- Codex should keep moving milestone by milestone without constant babysitting.
+- The project needs explicit validation gates, blocker format, and review-repair prompts before real rollout.
+
+Typical prompts:
+- `Turn this PRD into a Codex execution pack.`
+- `Give me AGENTS, PLAN, STATUS, TEST_PLAN, and BACKLOG for this project.`
+- `Build a resumable execution pack with prompts for execute, resume, and blocker compression.`
 
 ### [Triage Finding](https://github.com/kiku-jw/triage-finding)
 
@@ -397,6 +418,7 @@ Typical prompts:
 - Move to Product Shaping when there is signal, but the product decision is still fuzzy.
 - Add Product Council when the decision is high-impact and you need explicit multi-lens disagreement before committing.
 - Use Spec Bundle when implementation ambiguity becomes the main risk.
+- Use Execution Pack when Codex needs a durable operating layer with plan, status, validation gates, and resume prompts.
 - Use Triage Finding when outside material needs a verdict before it turns into noise.
 - Use Tool Scout when the decision depends on what currently exists in the ecosystem.
 - Use ADR Log when a real decision deserves durable trade-off capture.

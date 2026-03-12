@@ -85,6 +85,23 @@
     ]
   },
   {
+    "name": "Execution Pack",
+    "slug": "codex-execution-pack",
+    "repo": "https://github.com/kiku-jw/codex-execution-pack",
+    "tagline": "Build a durable Codex operating pack from a PRD or raw brief.",
+    "focus": "Codex execution system with plan, status, tests, backlog, and prompts",
+    "best_used_when": [
+      "Codex needs AGENTS.md, plan, status, tests, backlog, and reusable prompts instead of a loose spec.",
+      "The work will span sessions and should resume from repo state rather than chat memory.",
+      "You need explicit validation gates, blocker compression, and review-repair prompts for a serious build."
+    ],
+    "typical_prompts": [
+      "Turn this PRD into a Codex execution pack.",
+      "Give me AGENTS, PLAN, STATUS, TEST_PLAN, and BACKLOG for this project.",
+      "Build a resumable execution pack with prompts for execute, resume, and blocker compression."
+    ]
+  },
+  {
     "name": "Triage Finding",
     "slug": "triage-finding",
     "repo": "https://github.com/kiku-jw/triage-finding",
