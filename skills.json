@@ -14,7 +14,11 @@
       "Is this a tiny task or substantial work?",
       "Should this go into GitHub or stay in chat?",
       "Do we need a checklist, an execution brief, or a full architecture pack?"
-    ]
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/work-shaping-skill",
+    "origin_note": "Original public skill by Kiku."
   },
   {
     "name": "Idea Validation",
@@ -31,7 +35,11 @@
       "Validate this idea before we build it.",
       "Who is the buyer and what painful recurring job are we removing?",
       "What is the smallest wedge and the fastest proof path?"
-    ]
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/idea-validation-skill",
+    "origin_note": "Original public skill by Kiku."
   },
   {
     "name": "Product Shaping",
@@ -48,7 +56,11 @@
       "Shape the product side without overdoing process.",
       "Which framework fits this decision best?",
       "Map the risky assumptions and tell me the next lane."
-    ]
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/product-shaping-skill",
+    "origin_note": "Original public skill by Kiku."
   },
   {
     "name": "Product Council",
@@ -65,7 +77,11 @@
       "Run a product council on this.",
       "Help me choose the wedge.",
       "Do a roadmap council."
-    ]
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/product-council",
+    "origin_note": "Original public skill by Kiku."
   },
   {
     "name": "Spec Bundle",
@@ -82,7 +98,11 @@
       "Turn this PRD into an implementation-ready spec bundle.",
       "Add contracts, schema, and test plan.",
       "Give me the minimum bundle I can hand to an agent."
-    ]
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/agent-spec-bundle",
+    "origin_note": "Original public skill by Kiku."
   },
   {
     "name": "Execution Pack",
@@ -99,7 +119,11 @@
       "Turn this PRD into a Codex execution pack.",
       "Give me AGENTS, PLAN, STATUS, TEST_PLAN, and BACKLOG for this project.",
       "Build a resumable execution pack with prompts for execute, resume, and blocker compression."
-    ]
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-execution-pack",
+    "origin_note": "Original public skill by Kiku."
   },
   {
     "name": "Triage Finding",
@@ -116,7 +140,11 @@
       "Triage this.",
       "Look what I found.",
       "Is this useful for us?"
-    ]
+    ],
+    "origin_type": "adapted",
+    "origin_author": "Alena Zakharova",
+    "origin_repo": "https://github.com/alenazaharovaux/share/tree/main/skills/triage-finding",
+    "origin_note": "Codex-focused rewrite of the upstream Claude skill from alenazaharovaux/share."
   },
   {
     "name": "Tool Scout",
@@ -133,7 +161,11 @@
       "Find tools for this.",
       "What should we use for X?",
       "Is there an MCP for this?"
-    ]
+    ],
+    "origin_type": "adapted",
+    "origin_author": "Alena Zakharova",
+    "origin_repo": "https://github.com/alenazaharovaux/share/tree/main/skills/tool-scout",
+    "origin_note": "Codex-focused rewrite of the upstream Claude skill from alenazaharovaux/share."
   },
   {
     "name": "ADR Log",
@@ -150,7 +182,11 @@
       "Record this decision.",
       "Write an ADR.",
       "Log why we chose this."
-    ]
+    ],
+    "origin_type": "adapted",
+    "origin_author": "Alena Zakharova",
+    "origin_repo": "https://github.com/alenazaharovaux/share/tree/main/skills/adr",
+    "origin_note": "Adapted for Codex from the adr skill in alenazaharovaux/share."
   },
   {
     "name": "Issue Control Loop",
@@ -167,7 +203,11 @@
       "Turn this GitHub issue into a clean control loop.",
       "Use the issue as the canonical handoff surface.",
       "Parse this PRD and make it issue-ready."
-    ]
+    ],
+    "origin_type": "inspired",
+    "origin_author": "Sereja Ris",
+    "origin_repo": "https://github.com/serejaris/sereja.tech",
+    "origin_note": "Inspired by the GitHub-as-memory and conversation-as-artifact workflow patterns documented in sereja.tech."
   },
   {
     "name": "Continuity Ledger",
@@ -184,7 +224,11 @@
       "Keep continuity on this task.",
       "Update the ledger before we continue.",
       "Do not let this drift across sessions."
-    ]
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/continuity-ledger-skill",
+    "origin_note": "Original public skill by Kiku."
   },
   {
     "name": "Visual Explainer",
@@ -201,7 +245,11 @@
       "Visualize this.",
       "Make a diagram for this system.",
       "Render this table as HTML."
-    ]
+    ],
+    "origin_type": "adapted",
+    "origin_author": "Alena Zakharova",
+    "origin_repo": "https://github.com/alenazaharovaux/share/tree/main/skills/visual-explainer",
+    "origin_note": "Adapted for Codex from alenazaharovaux/share; that upstream skill credits nicobailon/visual-explainer as the original MIT base."
   },
   {
     "name": "AI Writing Detox",
@@ -218,7 +266,11 @@
       "Make this sound less AI.",
       "Detox this draft.",
       "Clean up this README copy."
-    ]
+    ],
+    "origin_type": "adapted",
+    "origin_author": "Alena Zakharova",
+    "origin_repo": "https://github.com/alenazaharovaux/share/tree/main/skills/ai-writing-detox",
+    "origin_note": "Codex-focused rewrite of the upstream Claude skill from alenazaharovaux/share."
   },
   {
     "name": "Public Artifact Lane",
@@ -235,7 +287,11 @@
       "Write a build diary from this work.",
       "Make release notes.",
       "Prepare a launch writeup."
-    ]
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/public-artifact-lane",
+    "origin_note": "Original public skill by Kiku."
   },
   {
     "name": "Illustration Prompt",
@@ -252,7 +308,11 @@
       "Write an illustration prompt.",
       "Help me make an image prompt from these refs.",
       "Turn this vague idea into a Midjourney prompt."
-    ]
+    ],
+    "origin_type": "adapted",
+    "origin_author": "Alena Zakharova",
+    "origin_repo": "https://github.com/alenazaharovaux/share/tree/main/skills/illustration-prompt",
+    "origin_note": "Codex-focused rewrite of the upstream Claude skill from alenazaharovaux/share."
   },
   {
     "name": "README Generator",
@@ -269,7 +329,11 @@
       "Write a README for this repo.",
       "Rewrite this README to be clearer for outsiders.",
       "Refresh the quick start and usage sections."
-    ]
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/readme-generator-skill",
+    "origin_note": "Original public skill by Kiku."
   },
   {
     "name": "Session to Post",
@@ -286,7 +350,11 @@
       "Turn this session into a post draft.",
       "Write a build diary from this diff and notes.",
       "Make an end-of-session writeup from today's work."
-    ]
+    ],
+    "origin_type": "inspired",
+    "origin_author": "Sereja Ris",
+    "origin_repo": "https://github.com/serejaris/blog-pipeline-template",
+    "origin_note": "Inspired by serejaris/blog-pipeline-template and the dev-diary writing patterns published in serejaris/sereja.tech."
   },
   {
     "name": "Video Builder",
@@ -303,6 +371,10 @@
       "Build a short narrated video from this script.",
       "Render a 2-minute explainer with edge-tts voiceover.",
       "Assemble an mp4 from these lines and images."
-    ]
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/video-builder-skill",
+    "origin_note": "Original public skill by Kiku."
   }
 ]
