@@ -53,7 +53,7 @@ The machine-readable version of this attribution data lives in [`skills.json`](.
 | Triage Finding | Fact-checking and usefulness triage for outside finds | You found a post, repo, article, screenshot, video, or saved note and need to know whether it matters now or is already covered locally | [triage-finding](https://github.com/kiku-jw/triage-finding) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/triage-finding) |
 | Tool Scout | Multi-source research for build-vs-buy decisions | You want current options before building or buying the wrong thing and need GitHub, MCP, awesome-list, and web signals instead of one-source vibes | [tool-scout](https://github.com/kiku-jw/tool-scout) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/tool-scout) |
 | ADR Log | Capturing architecture decisions and trade-offs | A stack, schema, workflow, or vendor choice needs durable rationale | [adr-log](https://github.com/kiku-jw/adr-log) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/adr) |
-| Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs durable issue state, deterministic handoff, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) | Inspired by [serejaris/sereja.tech](https://github.com/serejaris/sereja.tech) |
+| Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs durable issue state, deterministic handoff, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) | Inspired by [Sereja Ris](https://sereja.tech/) and [AI Corp](https://ai-corp.sereja.tech/) |
 | Continuity Ledger | Keeping substantial work coherent across sessions | The work is long-running and chat memory is not a safe source of truth | [continuity-ledger-skill](https://github.com/kiku-jw/continuity-ledger-skill) | Original by Kiku |
 | Visual Explainer | Turning complex structure into readable HTML artifacts | A diagram, system map, timeline, or wide table is clearer in a browser than in chat | [visual-explainer](https://github.com/kiku-jw/visual-explainer) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/visual-explainer) via [nicobailon/visual-explainer](https://github.com/nicobailon/visual-explainer) |
 | AI Writing Detox | Removing obvious AI-writing tics | A post, README, or public note needs to sound more human and more trustworthy | [ai-writing-detox](https://github.com/kiku-jw/ai-writing-detox) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/ai-writing-detox) |
@@ -252,6 +252,9 @@ Typical prompts:
 ### [Issue Control Loop](https://github.com/kiku-jw/issue-control-loop)
 
 Turn one GitHub Issue into a clean human-agent control surface.
+
+Inspiration note:
+This skill is directly shaped by Sereja Ris's GitHub-as-memory patterns and the context-separation model shown in [AI Corp](https://ai-corp.sereja.tech/).
 
 What it does:
 - keeps the issue canonical instead of letting task state dissolve into chat

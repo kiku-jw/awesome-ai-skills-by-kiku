@@ -211,7 +211,8 @@
     "origin_type": "inspired",
     "origin_author": "Sereja Ris",
     "origin_repo": "https://github.com/serejaris/sereja.tech",
-    "origin_note": "Inspired by the GitHub-as-memory and conversation-as-artifact workflow patterns documented in sereja.tech."
+    "origin_site": "https://ai-corp.sereja.tech/",
+    "origin_note": "Inspired by Sereja Ris's GitHub-as-memory and conversation-as-artifact workflow patterns, especially the context-separation model shown in ai-corp.sereja.tech."
   },
   {
     "name": "Continuity Ledger",
