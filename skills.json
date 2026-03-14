@@ -129,17 +129,19 @@
     "name": "Triage Finding",
     "slug": "triage-finding",
     "repo": "https://github.com/kiku-jw/triage-finding",
-    "tagline": "Turn an external finding into one honest verdict and next action.",
-    "focus": "Usefulness triage for links, repos, posts, and other findings",
+    "tagline": "Fact-check an external finding, detect duplicates, and give one honest verdict.",
+    "focus": "Fact-checking usefulness triage for links, repos, posts, videos, and saved findings",
     "best_used_when": [
       "You found a repo, article, post, screenshot, or video and need to know whether it matters now.",
-      "Novelty is easy to overvalue and you want a more honest filter.",
+      "You want the claims checked against the primary source before acting on them.",
+      "A tool or skill may already exist locally and you want to avoid duplicate adoption.",
       "A finding may deserve a skill, issue, note, or no action at all."
     ],
     "typical_prompts": [
       "Triage this.",
       "Look what I found.",
-      "Is this useful for us?"
+      "Is this useful for us?",
+      "Review this ideas folder."
     ],
     "origin_type": "adapted",
     "origin_author": "Alena Zakharova",
@@ -150,17 +152,19 @@
     "name": "Tool Scout",
     "slug": "tool-scout",
     "repo": "https://github.com/kiku-jw/tool-scout",
-    "tagline": "Research current tools and recommend the best-fit options.",
-    "focus": "Build-vs-buy and ecosystem option research",
+    "tagline": "Search current tools across multiple sources and recommend the best-fit option.",
+    "focus": "Multi-source build-vs-buy and ecosystem option research",
     "best_used_when": [
       "You need current tool options before spending engineering time or vendor budget.",
       "The answer depends on what exists right now, not on memory.",
+      "You want GitHub, MCP, awesome-list, and web signals instead of a one-source answer.",
       "You want a short list of strong candidates instead of a giant comparison dump."
     ],
     "typical_prompts": [
       "Find tools for this.",
       "What should we use for X?",
-      "Is there an MCP for this?"
+      "Is there an MCP for this?",
+      "Find a Python library for PDF generation."
     ],
     "origin_type": "adapted",
     "origin_author": "Alena Zakharova",

@@ -50,8 +50,8 @@ The machine-readable version of this attribution data lives in [`skills.json`](.
 | Product Council | Stress-testing high-impact product decisions | The main risk is in blind spots, conflicting lenses, or a fuzzy go/no-go call | [product-council](https://github.com/kiku-jw/product-council) | Original by Kiku |
 | Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [agent-spec-bundle](https://github.com/kiku-jw/agent-spec-bundle) | Original by Kiku |
 | Execution Pack | Turning a PRD into a durable Codex operating pack | Codex needs AGENTS.md, plan, status, tests, backlog, and reusable execution prompts for multi-session work | [codex-execution-pack](https://github.com/kiku-jw/codex-execution-pack) | Original by Kiku |
-| Triage Finding | Turning outside finds into actionable verdicts | You found a post, repo, article, screenshot, or video and need to know whether it matters now | [triage-finding](https://github.com/kiku-jw/triage-finding) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/triage-finding) |
-| Tool Scout | Researching the best-fit external tools | You want current options before building or buying the wrong thing | [tool-scout](https://github.com/kiku-jw/tool-scout) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/tool-scout) |
+| Triage Finding | Fact-checking and usefulness triage for outside finds | You found a post, repo, article, screenshot, video, or saved note and need to know whether it matters now or is already covered locally | [triage-finding](https://github.com/kiku-jw/triage-finding) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/triage-finding) |
+| Tool Scout | Multi-source research for build-vs-buy decisions | You want current options before building or buying the wrong thing and need GitHub, MCP, awesome-list, and web signals instead of one-source vibes | [tool-scout](https://github.com/kiku-jw/tool-scout) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/tool-scout) |
 | ADR Log | Capturing architecture decisions and trade-offs | A stack, schema, workflow, or vendor choice needs durable rationale | [adr-log](https://github.com/kiku-jw/adr-log) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/adr) |
 | Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs durable issue state, deterministic handoff, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) | Inspired by [serejaris/sereja.tech](https://github.com/serejaris/sereja.tech) |
 | Continuity Ledger | Keeping substantial work coherent across sessions | The work is long-running and chat memory is not a safe source of truth | [continuity-ledger-skill](https://github.com/kiku-jw/continuity-ledger-skill) | Original by Kiku |
@@ -186,40 +186,48 @@ Typical prompts:
 Turn an external finding into one honest verdict and one useful next step.
 
 What it does:
-- inspects links, posts, repos, screenshots, and similar findings
-- explains the gist plainly
+- inspects links, posts, repos, screenshots, videos, and saved idea notes
+- follows primary links and fact-checks claims instead of trusting the repost
+- checks whether the same skill or tool already exists locally
 - maps the finding to current work instead of rewarding novelty for its own sake
+- can re-triage an ideas folder against active work
 - ends with `Apply now`, `Save for later`, or `Not relevant`
 
 Good use cases:
 - You found something online and need to know whether it matters to current projects.
-- A repo or post looks interesting, but the real question is whether it deserves action.
+- A post sounds convincing, but you do not trust its details until they are checked at the source.
+- A repo or tool may already be installed locally and you want to avoid duplicate adoption.
 - You want to decide whether a finding should become a skill, issue, note, or nothing.
 
 Typical prompts:
 - `Triage this.`
 - `Look what I found.`
 - `Is this useful for us?`
+- `Review this ideas folder.`
 
 ### [Tool Scout](https://github.com/kiku-jw/tool-scout)
 
 Research the current tool landscape before building or buying the wrong thing.
 
 What it does:
-- searches current tools, services, MCP servers, APIs, models, and libraries
-- compares only the strongest candidates by fit and maturity
-- prioritizes official docs, repos, and pricing pages
+- searches current tools, services, MCP servers, APIs, models, and libraries across web, GitHub, MCP catalogs, awesome-lists, and finalist package checks
+- chooses sources adaptively instead of running one generic search every time
+- deduplicates tools found across multiple sources and aggregates signals such as stars or archived status
+- filters out trivial tasks where custom code is the better answer
+- compares only the strongest candidates by fit, maturity, and integration cost
 - ends with a concrete recommendation, not a bloated longlist
 
 Good use cases:
 - Build-vs-buy is genuinely open.
 - The tool ecosystem changes too quickly for memory-only recommendations.
+- You need to know whether there is an MCP server, strong open-source repo, or serious hosted product for the job.
 - You need current options before committing engineering time or vendor budget.
 
 Typical prompts:
 - `Find tools for this.`
 - `What should we use for X?`
 - `Is there an MCP for this?`
+- `Find a Python library for PDF generation.`
 
 ### [ADR Log](https://github.com/kiku-jw/adr-log)
 
