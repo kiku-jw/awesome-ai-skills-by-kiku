@@ -14,7 +14,7 @@ Most "prompt lists" are just snippets. These are operational skills: small, opin
 
 Core build lane:
 
-`Work Shaping -> Idea Validation -> Product Shaping -> Product Council (if needed) -> Spec Bundle -> Execution Pack`
+`Work Shaping -> Idea Validation -> Product Shaping -> Product Council (if needed) -> Spec Bundle -> JustDoIt`
 
 Workflow extensions:
 
@@ -22,9 +22,12 @@ Workflow extensions:
 - `Triage Finding` when an external link, repo, screenshot, or post needs an honest usefulness verdict.
 - `Tool Scout` when build-vs-buy is open and current ecosystem research matters.
 - `ADR Log` when a decision deserves durable rationale and trade-off capture.
+- `JustDoIt` when a non-trivial repo task needs durable plan, status, and test-plan files before execution starts.
 - `Execution Pack` when Codex needs AGENTS, plan, status, tests, backlog, and resumable prompts instead of a loose spec.
 - `Issue Control Loop` when GitHub should hold canonical task state and agent handoff.
+- `GitHub Mobile Ops` when the operator surface is phone-first and GitHub Mobile should stay a control layer, not pretend to be a dev box.
 - `Continuity Ledger` when the task is long enough that chat memory will drift.
+- `Adversarial Review` when a meaningful diff deserves a skeptical bug, regression, and security pass before sign-off.
 - `Visual Explainer` when a browser-readable HTML artifact is clearer than chat prose.
 - `AI Writing Detox` when public-facing text needs credibility instead of generic LLM polish.
 - `Public Artifact Lane` when real work should become a public-ready artifact.
@@ -42,19 +45,24 @@ The machine-readable version of this attribution data lives in [`skills.json`](.
 
 ## Public Skills
 
+Some public skills now live inside multi-skill repos. When that is the case, the repo link below points to the exact skill directory rather than just the repo root.
+
 | Skill | Focus | Best used when | Repo | Origin |
 | --- | --- | --- | --- | --- |
 | Work Shaping | Process calibration before coding | You need to decide how much process, tracking, architecture, or review the task deserves | [work-shaping-skill](https://github.com/kiku-jw/work-shaping-skill) | Original by Kiku |
 | Idea Validation | Turning ideas into honest validation briefs | The idea is still fuzzy and should not jump straight into a PRD or build | [idea-validation-skill](https://github.com/kiku-jw/idea-validation-skill) | Original by Kiku |
 | Product Shaping | Choosing the smallest useful product framework | The idea has some signal, but the next product decision is still unclear | [product-shaping-skill](https://github.com/kiku-jw/product-shaping-skill) | Original by Kiku |
 | Product Council | Stress-testing high-impact product decisions | The main risk is in blind spots, conflicting lenses, or a fuzzy go/no-go call | [product-council](https://github.com/kiku-jw/product-council) | Original by Kiku |
-| Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [agent-spec-bundle](https://github.com/kiku-jw/agent-spec-bundle) | Original by Kiku |
+| Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [spec-bundle-skill](https://github.com/kiku-jw/spec-bundle-skill) | Original by Kiku |
+| JustDoIt | Durable execution planning for non-trivial repo work | A task needs plan, status, and test-plan files before execution and another Codex run should be able to resume cleanly | [codex-skills/justdoit](https://github.com/kiku-jw/codex-skills/tree/main/justdoit) | Original by Kiku |
 | Execution Pack | Turning a PRD into a durable Codex operating pack | Codex needs AGENTS.md, plan, status, tests, backlog, and reusable execution prompts for multi-session work | [codex-execution-pack](https://github.com/kiku-jw/codex-execution-pack) | Original by Kiku |
 | Triage Finding | Fact-checking and usefulness triage for outside finds | You found a post, repo, article, screenshot, video, or saved note and need to know whether it matters now or is already covered locally | [triage-finding](https://github.com/kiku-jw/triage-finding) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/triage-finding) |
 | Tool Scout | Multi-source research for build-vs-buy decisions | You want current options before building or buying the wrong thing and need GitHub, MCP, awesome-list, and web signals instead of one-source vibes | [tool-scout](https://github.com/kiku-jw/tool-scout) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/tool-scout) |
 | ADR Log | Capturing architecture decisions and trade-offs | A stack, schema, workflow, or vendor choice needs durable rationale | [adr-log](https://github.com/kiku-jw/adr-log) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/adr) |
 | Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs durable issue state, deterministic handoff, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) | Inspired by [serejaris/sereja.tech](https://github.com/serejaris/sereja.tech) |
+| GitHub Mobile Ops | Phone-first GitHub operator workflow | You want Issues, Projects, and GitHub Mobile to act as a real control surface from the phone | [codex-skills/github-mobile-ops](https://github.com/kiku-jw/codex-skills/tree/main/github-mobile-ops) | Original by Kiku |
 | Continuity Ledger | Keeping substantial work coherent across sessions | The work is long-running and chat memory is not a safe source of truth | [continuity-ledger-skill](https://github.com/kiku-jw/continuity-ledger-skill) | Original by Kiku |
+| Adversarial Review | Skeptical second-pass review for risky diffs | A meaningful diff needs a findings-first pass focused on bugs, regressions, security, and missing tests | [codex-skills/adversarial-review](https://github.com/kiku-jw/codex-skills/tree/main/adversarial-review) | Original by Kiku |
 | Visual Explainer | Turning complex structure into readable HTML artifacts | A diagram, system map, timeline, or wide table is clearer in a browser than in chat | [visual-explainer](https://github.com/kiku-jw/visual-explainer) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/visual-explainer) via [nicobailon/visual-explainer](https://github.com/nicobailon/visual-explainer) |
 | AI Writing Detox | Removing obvious AI-writing tics | A post, README, or public note needs to sound more human and more trustworthy | [ai-writing-detox](https://github.com/kiku-jw/ai-writing-detox) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/ai-writing-detox) |
 | Public Artifact Lane | Turning real work into public-ready artifacts | You need a build diary, release notes, launch post, or case study from real work | [public-artifact-lane](https://github.com/kiku-jw/public-artifact-lane) | Original by Kiku |
@@ -143,7 +151,7 @@ Typical prompts:
 - `Help me choose the wedge.`
 - `Do a roadmap council.`
 
-### [Spec Bundle](https://github.com/kiku-jw/agent-spec-bundle)
+### [Spec Bundle](https://github.com/kiku-jw/spec-bundle-skill)
 
 Build an implementation-ready spec bundle when a plain PRD is too soft.
 
@@ -161,6 +169,25 @@ Typical prompts:
 - `Turn this PRD into an implementation-ready spec bundle.`
 - `Add contracts, schema, and test plan.`
 - `Give me the minimum bundle I can hand to an agent.`
+
+### [JustDoIt](https://github.com/kiku-jw/codex-skills/tree/main/justdoit)
+
+Turn messy repo work into durable planning files before implementation starts.
+
+What it does:
+- chooses or creates the right plan, status, and test-plan files
+- normalizes scope, constraints, assumptions, risks, and validation commands
+- ends with a short ready-to-execute handoff instead of a vague planning essay
+
+Good use cases:
+- A repo task is too big for a one-shot answer but too underspecified for immediate coding.
+- You want another Codex run to resume from repo files instead of reconstructing context from chat.
+- You need a clear first execution slice and explicit stop conditions before implementation begins.
+
+Typical prompts:
+- `Turn this task into a ready-to-execute plan.`
+- `Write plan, status, and test-plan files for this repo task.`
+- `Prepare the execution docs before we start coding.`
 
 ### [Execution Pack](https://github.com/kiku-jw/codex-execution-pack)
 
@@ -269,6 +296,25 @@ Typical prompts:
 - `Use the issue as the canonical handoff surface.`
 - `Parse this PRD and make it issue-ready.`
 
+### [GitHub Mobile Ops](https://github.com/kiku-jw/codex-skills/tree/main/github-mobile-ops)
+
+Map GitHub Issues, Projects, and GitHub Mobile into a phone-first operator workflow.
+
+What it does:
+- separates canonical issue truth, project board workflow, mobile control, and chat signal paths
+- recommends the smallest honest phone workflow instead of pretending the phone is a full dev environment
+- keeps project fields and operator responsibilities concrete
+
+Good use cases:
+- You want to control work from a phone without losing canonical task state.
+- Issues, Projects, and GitHub Mobile are being used inconsistently and need a cleaner split.
+- You need to know what still requires a laptop and what can stay mobile-first.
+
+Typical prompts:
+- `How should GitHub work from my phone?`
+- `Give me a phone-first issue and project workflow.`
+- `What belongs in GitHub Mobile versus desktop?`
+
 ### [Continuity Ledger](https://github.com/kiku-jw/continuity-ledger-skill)
 
 Keep substantial work coherent with a short factual `CONTINUITY.md`.
@@ -287,6 +333,25 @@ Typical prompts:
 - `Keep continuity on this task.`
 - `Update the ledger before we continue.`
 - `Do not let this drift across sessions.`
+
+### [Adversarial Review](https://github.com/kiku-jw/codex-skills/tree/main/adversarial-review)
+
+Run a skeptical second-pass review that hunts for failures, not style nits.
+
+What it does:
+- reviews changed behavior before obsessing over diff cosmetics
+- prioritizes correctness bugs, regressions, security risks, destructive side effects, and missing tests
+- reports findings first and names residual risk even when the diff looks clean
+
+Good use cases:
+- A meaningful diff needs a real sign-off pass before anyone trusts it.
+- Agent-generated output looks plausible, but you want failure-hunting rather than approval theater.
+- The most important question is what can break, not how elegant the patch looks.
+
+Typical prompts:
+- `Do an adversarial review on this diff.`
+- `Look for bugs and regressions here.`
+- `Give me a findings-first second pass.`
 
 ### [Visual Explainer](https://github.com/kiku-jw/visual-explainer)
 

@@ -86,7 +86,7 @@
   {
     "name": "Spec Bundle",
     "slug": "spec-bundle",
-    "repo": "https://github.com/kiku-jw/agent-spec-bundle",
+    "repo": "https://github.com/kiku-jw/spec-bundle-skill",
     "tagline": "Build an implementation-ready bundle when a PRD is not enough.",
     "focus": "Execution-ready spec artifacts",
     "best_used_when": [
@@ -101,7 +101,28 @@
     ],
     "origin_type": "original",
     "origin_author": "Kiku",
-    "origin_repo": "https://github.com/kiku-jw/agent-spec-bundle",
+    "origin_repo": "https://github.com/kiku-jw/spec-bundle-skill",
+    "origin_note": "Original public skill by Kiku. Canonical public source is spec-bundle-skill; agent-spec-bundle remains a synced mirror."
+  },
+  {
+    "name": "JustDoIt",
+    "slug": "justdoit",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/justdoit",
+    "tagline": "Turn messy repo work into durable plan, status, and test-plan files.",
+    "focus": "Durable execution planning for non-trivial repo work",
+    "best_used_when": [
+      "A repo task is too big for a one-shot answer but too underspecified for immediate coding.",
+      "You want another Codex run to resume from repo files instead of reconstructing context from chat.",
+      "You need a clear first execution slice and explicit stop conditions before implementation begins."
+    ],
+    "typical_prompts": [
+      "Turn this task into a ready-to-execute plan.",
+      "Write plan, status, and test-plan files for this repo task.",
+      "Prepare the execution docs before we start coding."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills/tree/main/justdoit",
     "origin_note": "Original public skill by Kiku."
   },
   {
@@ -214,6 +235,27 @@
     "origin_note": "Inspired by the GitHub-as-memory and conversation-as-artifact workflow patterns documented in sereja.tech."
   },
   {
+    "name": "GitHub Mobile Ops",
+    "slug": "github-mobile-ops",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/github-mobile-ops",
+    "tagline": "Map Issues, Projects, and GitHub Mobile into a phone-first operator workflow.",
+    "focus": "Phone-first GitHub operator workflow",
+    "best_used_when": [
+      "You want to control work from a phone without losing canonical task state.",
+      "Issues, Projects, and GitHub Mobile are being used inconsistently and need a cleaner split.",
+      "You need to know what still requires a laptop and what can stay mobile-first."
+    ],
+    "typical_prompts": [
+      "How should GitHub work from my phone?",
+      "Give me a phone-first issue and project workflow.",
+      "What belongs in GitHub Mobile versus desktop?"
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills/tree/main/github-mobile-ops",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
     "name": "Continuity Ledger",
     "slug": "continuity-ledger",
     "repo": "https://github.com/kiku-jw/continuity-ledger-skill",
@@ -232,6 +274,27 @@
     "origin_type": "original",
     "origin_author": "Kiku",
     "origin_repo": "https://github.com/kiku-jw/continuity-ledger-skill",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Adversarial Review",
+    "slug": "adversarial-review",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/adversarial-review",
+    "tagline": "Run a skeptical second-pass review that hunts for failures, not style nits.",
+    "focus": "Findings-first second-pass review for risky diffs",
+    "best_used_when": [
+      "A meaningful diff needs a real sign-off pass before anyone trusts it.",
+      "Agent-generated output looks plausible, but you want failure-hunting rather than approval theater.",
+      "The most important question is what can break, not how elegant the patch looks."
+    ],
+    "typical_prompts": [
+      "Do an adversarial review on this diff.",
+      "Look for bugs and regressions here.",
+      "Give me a findings-first second pass."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills/tree/main/adversarial-review",
     "origin_note": "Original public skill by Kiku."
   },
   {
