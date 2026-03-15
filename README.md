@@ -53,13 +53,13 @@ Some public skills now live inside multi-skill repos. When that is the case, the
 | Idea Validation | Turning ideas into honest validation briefs | The idea is still fuzzy and should not jump straight into a PRD or build | [idea-validation-skill](https://github.com/kiku-jw/idea-validation-skill) | Original by Kiku |
 | Product Shaping | Choosing the smallest useful product framework | The idea has some signal, but the next product decision is still unclear | [product-shaping-skill](https://github.com/kiku-jw/product-shaping-skill) | Original by Kiku |
 | Product Council | Stress-testing high-impact product decisions | The main risk is in blind spots, conflicting lenses, or a fuzzy go/no-go call | [product-council](https://github.com/kiku-jw/product-council) | Original by Kiku |
-| Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [spec-bundle-skill](https://github.com/kiku-jw/spec-bundle-skill) | Original by Kiku |
-| JustDoIt | Durable execution planning for non-trivial repo work | A task needs plan, status, and test-plan files before execution and another Codex run should be able to resume cleanly | [codex-skills/justdoit](https://github.com/kiku-jw/codex-skills/tree/main/justdoit) | Original by Kiku |
+| Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [spec-bundle-skill](https://github.com/kiku-jw/spec-bundle-skill) | Inspired by [Sereja Ris](https://sereja.tech/) |
+| JustDoIt | Durable execution planning for non-trivial repo work | A task needs plan, status, and test-plan files before execution and another Codex run should be able to resume cleanly | [codex-skills/justdoit](https://github.com/kiku-jw/codex-skills/tree/main/justdoit) | Adapted from [serejaris/justdoit](https://github.com/serejaris/justdoit) |
 | Execution Pack | Turning a PRD into a durable Codex operating pack | Codex needs AGENTS.md, plan, status, tests, backlog, and reusable execution prompts for multi-session work | [codex-execution-pack](https://github.com/kiku-jw/codex-execution-pack) | Original by Kiku |
 | Triage Finding | Fact-checking and usefulness triage for outside finds | You found a post, repo, article, screenshot, video, or saved note and need to know whether it matters now or is already covered locally | [triage-finding](https://github.com/kiku-jw/triage-finding) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/triage-finding) |
 | Tool Scout | Multi-source research for build-vs-buy decisions | You want current options before building or buying the wrong thing and need GitHub, MCP, awesome-list, and web signals instead of one-source vibes | [tool-scout](https://github.com/kiku-jw/tool-scout) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/tool-scout) |
 | ADR Log | Capturing architecture decisions and trade-offs | A stack, schema, workflow, or vendor choice needs durable rationale | [adr-log](https://github.com/kiku-jw/adr-log) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/adr) |
-| Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs durable issue state, deterministic handoff, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) | Inspired by [serejaris/sereja.tech](https://github.com/serejaris/sereja.tech) |
+| Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs durable issue state, deterministic handoff, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) | Inspired by [Sereja Ris](https://sereja.tech/) and [AI Corp](https://ai-corp.sereja.tech/) |
 | GitHub Mobile Ops | Phone-first GitHub operator workflow | You want Issues, Projects, and GitHub Mobile to act as a real control surface from the phone | [codex-skills/github-mobile-ops](https://github.com/kiku-jw/codex-skills/tree/main/github-mobile-ops) | Original by Kiku |
 | Continuity Ledger | Keeping substantial work coherent across sessions | The work is long-running and chat memory is not a safe source of truth | [continuity-ledger-skill](https://github.com/kiku-jw/continuity-ledger-skill) | Original by Kiku |
 | Adversarial Review | Skeptical second-pass review for risky diffs | A meaningful diff needs a findings-first pass focused on bugs, regressions, security, and missing tests | [codex-skills/adversarial-review](https://github.com/kiku-jw/codex-skills/tree/main/adversarial-review) | Original by Kiku |
@@ -155,6 +155,9 @@ Typical prompts:
 
 Build an implementation-ready spec bundle when a plain PRD is too soft.
 
+Inspiration note:
+This skill is not a direct clone, but its PRD-first, draft-before-artifact posture is strongly shaped by Sereja Ris's planning patterns documented on [sereja.tech](https://sereja.tech/).
+
 What it does:
 - Chooses the smallest bundle shape that will actually reduce ambiguity.
 - Scaffolds artifacts such as `prd.md`, `contracts.md`, `schema.sql`, `test-plan.md`, and `epics.md`.
@@ -173,6 +176,9 @@ Typical prompts:
 ### [JustDoIt](https://github.com/kiku-jw/codex-skills/tree/main/justdoit)
 
 Turn messy repo work into durable planning files before implementation starts.
+
+Inspiration note:
+The public Kiku version is an adaptation of Sereja Ris's standalone [`justdoit`](https://github.com/serejaris/justdoit) skill, then rewritten into the current harness and routing setup.
 
 What it does:
 - chooses or creates the right plan, status, and test-plan files
@@ -279,6 +285,9 @@ Typical prompts:
 ### [Issue Control Loop](https://github.com/kiku-jw/issue-control-loop)
 
 Turn one GitHub Issue into a clean human-agent control surface.
+
+Inspiration note:
+This skill is directly shaped by Sereja Ris's GitHub-as-memory patterns and the context-separation model shown in [AI Corp](https://ai-corp.sereja.tech/).
 
 What it does:
 - keeps the issue canonical instead of letting task state dissolve into chat

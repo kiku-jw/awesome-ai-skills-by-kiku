@@ -99,10 +99,10 @@
       "Add contracts, schema, and test plan.",
       "Give me the minimum bundle I can hand to an agent."
     ],
-    "origin_type": "original",
-    "origin_author": "Kiku",
-    "origin_repo": "https://github.com/kiku-jw/spec-bundle-skill",
-    "origin_note": "Original public skill by Kiku. Canonical public source is spec-bundle-skill; agent-spec-bundle remains a synced mirror."
+    "origin_type": "inspired",
+    "origin_author": "Sereja Ris",
+    "origin_repo": "https://github.com/serejaris/sereja.tech",
+    "origin_note": "Inspired by Sereja Ris's PRD-first and draft-before-artifact planning patterns documented in sereja.tech. Canonical public source is spec-bundle-skill; agent-spec-bundle remains a synced mirror."
   },
   {
     "name": "JustDoIt",
@@ -120,10 +120,10 @@
       "Write plan, status, and test-plan files for this repo task.",
       "Prepare the execution docs before we start coding."
     ],
-    "origin_type": "original",
-    "origin_author": "Kiku",
-    "origin_repo": "https://github.com/kiku-jw/codex-skills/tree/main/justdoit",
-    "origin_note": "Original public skill by Kiku."
+    "origin_type": "adapted",
+    "origin_author": "Sereja Ris",
+    "origin_repo": "https://github.com/serejaris/justdoit",
+    "origin_note": "Adapted from Sereja Ris's public justdoit skill, then rewritten into the current harness and routing setup."
   },
   {
     "name": "Execution Pack",
@@ -232,7 +232,8 @@
     "origin_type": "inspired",
     "origin_author": "Sereja Ris",
     "origin_repo": "https://github.com/serejaris/sereja.tech",
-    "origin_note": "Inspired by the GitHub-as-memory and conversation-as-artifact workflow patterns documented in sereja.tech."
+    "origin_note": "Inspired by Sereja Ris's GitHub-as-memory and conversation-as-artifact workflow patterns, especially the context-separation model shown in ai-corp.sereja.tech.",
+    "origin_site": "https://ai-corp.sereja.tech/"
   },
   {
     "name": "GitHub Mobile Ops",
