@@ -147,6 +147,27 @@
     "origin_note": "Original public skill by Kiku."
   },
   {
+    "name": "AGX Orchestrator",
+    "slug": "agx-orchestrator",
+    "repo": "https://github.com/kiku-jw/agx-core/tree/main/skills/agx-orchestrator",
+    "tagline": "Route one bounded execution packet through agx-core while Codex keeps judgment.",
+    "focus": "Bounded external execution routing with durable task packets and local verification",
+    "best_used_when": [
+      "Codex should keep planning and final judgment, but one execution slice is narrow enough to dispatch safely.",
+      "You want saved task bundles, saved run results, and explicit path scope instead of chat-only execution.",
+      "The task is ready for execution and already has local verification or can be given one now."
+    ],
+    "typical_prompts": [
+      "Route this through AGX once the packet is ready.",
+      "Keep planning here, but dispatch the implementation slice through agx-core.",
+      "Turn this bounded change into an agx-core packet with verification."
+    ],
+    "origin_type": "inspired",
+    "origin_author": "Sereja Ris",
+    "origin_repo": "https://github.com/serejaris/sereja.tech",
+    "origin_note": "Original public skill by Kiku, strongly shaped by Sereja Ris's layer-first routing ideas and the separation model shown in AI Corp."
+  },
+  {
     "name": "Triage Finding",
     "slug": "triage-finding",
     "repo": "https://github.com/kiku-jw/triage-finding",

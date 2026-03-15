@@ -14,7 +14,7 @@ Most "prompt lists" are just snippets. These are operational skills: small, opin
 
 Core build lane:
 
-`Work Shaping -> Idea Validation -> Product Shaping -> Product Council (if needed) -> Spec Bundle -> JustDoIt`
+`Work Shaping -> Idea Validation -> Product Shaping -> Product Council (if needed) -> Spec Bundle -> JustDoIt -> AGX Orchestrator -> Adversarial Review`
 
 Workflow extensions:
 
@@ -24,6 +24,7 @@ Workflow extensions:
 - `ADR Log` when a decision deserves durable rationale and trade-off capture.
 - `JustDoIt` when a non-trivial repo task needs durable plan, status, and test-plan files before execution starts.
 - `Execution Pack` when Codex needs AGENTS, plan, status, tests, backlog, and resumable prompts instead of a loose spec.
+- `AGX Orchestrator` when Codex should keep planning and final judgment but route one bounded execution packet through a durable external lane.
 - `Issue Control Loop` when GitHub should hold canonical task state and agent handoff.
 - `GitHub Mobile Ops` when the operator surface is phone-first and GitHub Mobile should stay a control layer, not pretend to be a dev box.
 - `Continuity Ledger` when the task is long enough that chat memory will drift.
@@ -56,6 +57,7 @@ Some public skills now live inside multi-skill repos. When that is the case, the
 | Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [spec-bundle-skill](https://github.com/kiku-jw/spec-bundle-skill) | Inspired by [Sereja Ris](https://sereja.tech/) |
 | JustDoIt | Durable execution planning for non-trivial repo work | A task needs plan, status, and test-plan files before execution and another Codex run should be able to resume cleanly | [codex-skills/justdoit](https://github.com/kiku-jw/codex-skills/tree/main/justdoit) | Adapted from [serejaris/justdoit](https://github.com/serejaris/justdoit) |
 | Execution Pack | Turning a PRD into a durable Codex operating pack | Codex needs AGENTS.md, plan, status, tests, backlog, and reusable execution prompts for multi-session work | [codex-execution-pack](https://github.com/kiku-jw/codex-execution-pack) | Original by Kiku |
+| AGX Orchestrator | Bounded execution routing with durable task packets | Codex should keep planning and final judgment, but one narrow execution slice should run through a durable external lane with explicit paths and verification | [agx-core/agx-orchestrator](https://github.com/kiku-jw/agx-core/tree/main/skills/agx-orchestrator) | Inspired by [Sereja Ris](https://sereja.tech/) and [AI Corp](https://ai-corp.sereja.tech/) |
 | Triage Finding | Fact-checking and usefulness triage for outside finds | You found a post, repo, article, screenshot, video, or saved note and need to know whether it matters now or is already covered locally | [triage-finding](https://github.com/kiku-jw/triage-finding) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/triage-finding) |
 | Tool Scout | Multi-source research for build-vs-buy decisions | You want current options before building or buying the wrong thing and need GitHub, MCP, awesome-list, and web signals instead of one-source vibes | [tool-scout](https://github.com/kiku-jw/tool-scout) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/tool-scout) |
 | ADR Log | Capturing architecture decisions and trade-offs | A stack, schema, workflow, or vendor choice needs durable rationale | [adr-log](https://github.com/kiku-jw/adr-log) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/adr) |
@@ -213,6 +215,29 @@ Typical prompts:
 - `Turn this PRD into a Codex execution pack.`
 - `Give me AGENTS, PLAN, STATUS, TEST_PLAN, and BACKLOG for this project.`
 - `Build a resumable execution pack with prompts for execute, resume, and blocker compression.`
+
+### [AGX Orchestrator](https://github.com/kiku-jw/agx-core/tree/main/skills/agx-orchestrator)
+
+Route one bounded execution packet through `agx-core` while Codex stays the control plane.
+
+Inspiration note:
+This skill is original in implementation, but its layer-first routing and explicit separation between planning, execution, and review are strongly shaped by Sereja Ris and [AI Corp](https://ai-corp.sereja.tech/).
+
+What it does:
+- keeps planning, architecture, and final acceptance in Codex
+- dispatches only narrow execution packets with explicit `allowed_paths`
+- requires local verification before treating a worker result as real
+- stores the execution lane as a durable task/run artifact instead of chat-only memory
+
+Good use cases:
+- Codex should keep judgment, but one code or review slice is narrow enough to dispatch safely.
+- You want an execution lane with saved packets, saved results, and explicit path scope.
+- The task is ready for execution, but you do not want private proxy or operator-surface assumptions in the public workflow.
+
+Typical prompts:
+- `Route this through AGX once the packet is ready.`
+- `Keep planning here, but dispatch the implementation slice through agx-core.`
+- `Turn this bounded change into an agx-core packet with verification.`
 
 ### [Triage Finding](https://github.com/kiku-jw/triage-finding)
 
