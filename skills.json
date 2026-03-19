@@ -108,17 +108,17 @@
     "name": "JustDoIt",
     "slug": "justdoit",
     "repo": "https://github.com/kiku-jw/codex-skills/tree/main/justdoit",
-    "tagline": "Turn messy repo work into durable plan, status, and test-plan files.",
+    "tagline": "Turn messy repo work into sequence-first, issue-first execution docs.",
     "focus": "Durable execution planning for non-trivial repo work",
     "best_used_when": [
       "A repo task is too big for a one-shot answer but too underspecified for immediate coding.",
-      "You want another Codex run to resume from repo files instead of reconstructing context from chat.",
-      "You need a clear first execution slice and explicit stop conditions before implementation begins."
+      "You want another Codex run to resume from a canonical issue plus durable repo files instead of reconstructing context from chat.",
+      "You need the next execution slice and validation surface chosen before implementation begins."
     ],
     "typical_prompts": [
       "Turn this task into a ready-to-execute plan.",
-      "Write plan, status, and test-plan files for this repo task.",
-      "Prepare the execution docs before we start coding."
+      "Run the sequence-first planning flow for this repo task.",
+      "Prepare issue-first execution docs before we start coding."
     ],
     "origin_type": "adapted",
     "origin_author": "Sereja Ris",
@@ -150,17 +150,17 @@
     "name": "AGX Orchestrator",
     "slug": "agx-orchestrator",
     "repo": "https://github.com/kiku-jw/agx-core/tree/main/skills/agx-orchestrator",
-    "tagline": "Route one bounded execution packet through agx-core while Codex keeps judgment.",
-    "focus": "Bounded external execution routing with durable task packets and local verification",
+    "tagline": "Use AGX as an optional bounded outside lane while Codex keeps judgment.",
+    "focus": "Optional bounded outside lane with durable task packets and local verification",
     "best_used_when": [
-      "Codex should keep planning and final judgment, but one execution slice is narrow enough to dispatch safely.",
-      "You want saved task bundles, saved run results, and explicit path scope instead of chat-only execution.",
-      "The task is ready for execution and already has local verification or can be given one now."
+      "Codex should keep planning and final judgment, but one helper or skeptical review slice is narrow enough to dispatch safely.",
+      "You want saved task bundles, saved run results, and explicit path scope instead of chat-only external execution.",
+      "The task is already scoped and has local verification or can be given one now."
     ],
     "typical_prompts": [
       "Route this through AGX once the packet is ready.",
-      "Keep planning here, but dispatch the implementation slice through agx-core.",
-      "Turn this bounded change into an agx-core packet with verification."
+      "Keep planning here, but use AGX only for the bounded helper slice.",
+      "Turn this scoped change into an AGX packet with verification."
     ],
     "origin_type": "inspired",
     "origin_author": "Sereja Ris",
@@ -238,17 +238,17 @@
     "name": "Issue Control Loop",
     "slug": "issue-control-loop",
     "repo": "https://github.com/kiku-jw/issue-control-loop",
-    "tagline": "Keep one GitHub Issue canonical for humans and agents.",
-    "focus": "Canonical issue-driven workflow control",
+    "tagline": "Keep one GitHub Issue canonical and generate issue-first execution scaffolds.",
+    "focus": "Canonical issue-driven workflow control with deterministic sequencing",
     "best_used_when": [
-      "Work needs durable issue state and explicit handoff points.",
+      "Work needs issue-first execution order and explicit handoff points.",
       "You want machine-readable control state instead of vague chat status.",
-      "GitHub Issue and Project should become the real operator surface."
+      "GitHub Issue and Project should become the real operator surface and the skill should emit ready-to-use scaffolds."
     ],
     "typical_prompts": [
       "Turn this GitHub issue into a clean control loop.",
       "Use the issue as the canonical handoff surface.",
-      "Parse this PRD and make it issue-ready."
+      "Run sequence-first and make this PRD issue-ready."
     ],
     "origin_type": "inspired",
     "origin_author": "Sereja Ris",
@@ -465,5 +465,25 @@
     "origin_author": "Kiku",
     "origin_repo": "https://github.com/kiku-jw/video-builder-skill",
     "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Codex Autonomous Delivery",
+    "slug": "codex-autonomous-delivery",
+    "repo": "https://github.com/kiku-jw/superpowers/tree/main/skills/codex-autonomous-delivery",
+    "tagline": "Keep one main Codex lane responsible from issue to verification.",
+    "focus": "Codex-first execution lane with issue-first flow",
+    "best_used_when": [
+      "One main Codex lane should take work from request or PRD through issue, plan, execution, and verification.",
+      "The task is substantial and should run from a canonical issue plus durable local mirrors.",
+      "You want AGX to stay optional and bounded instead of becoming a second control plane."
+    ],
+    "typical_prompts": [
+      "Use codex-autonomous-delivery for this feature.",
+      "Take this from PRD to issue to execution without leaving Codex.",
+      "Keep this Codex-first and use AGX only if a bounded review lane is worth it."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/superpowers"
   }
 ]

@@ -14,7 +14,7 @@ Most "prompt lists" are just snippets. These are operational skills: small, opin
 
 Core build lane:
 
-`Work Shaping -> Idea Validation -> Product Shaping -> Product Council (if needed) -> Spec Bundle -> JustDoIt -> AGX Orchestrator -> Adversarial Review`
+`Work Shaping -> Idea Validation -> Product Shaping -> Product Council (if needed) -> Spec Bundle -> Issue Control Loop -> JustDoIt -> Codex Autonomous Delivery -> Adversarial Review`
 
 Workflow extensions:
 
@@ -22,10 +22,11 @@ Workflow extensions:
 - `Triage Finding` when an external link, repo, screenshot, or post needs an honest usefulness verdict.
 - `Tool Scout` when build-vs-buy is open and current ecosystem research matters.
 - `ADR Log` when a decision deserves durable rationale and trade-off capture.
-- `JustDoIt` when a non-trivial repo task needs durable plan, status, and test-plan files before execution starts.
+- `JustDoIt` when a non-trivial repo task needs sequence-first, issue-first planning files before execution starts.
 - `Execution Pack` when Codex needs AGENTS, plan, status, tests, backlog, and resumable prompts instead of a loose spec.
-- `AGX Orchestrator` when Codex should keep planning and final judgment but route one bounded execution packet through a durable external lane.
-- `Issue Control Loop` when GitHub should hold canonical task state and agent handoff.
+- `AGX Orchestrator` when Codex should keep planning and final judgment and use AGX only for an optional bounded outside lane.
+- `Issue Control Loop` when GitHub should hold canonical task state, choose issue-first execution order, and generate deterministic scaffolds.
+- `Codex Autonomous Delivery` when one main Codex lane should carry the work from planning through verification with GitHub issue first and AGX optional.
 - `GitHub Mobile Ops` when the operator surface is phone-first and GitHub Mobile should stay a control layer, not pretend to be a dev box.
 - `Continuity Ledger` when the task is long enough that chat memory will drift.
 - `Adversarial Review` when a meaningful diff deserves a skeptical bug, regression, and security pass before sign-off.
@@ -55,13 +56,14 @@ Some public skills now live inside multi-skill repos. When that is the case, the
 | Product Shaping | Choosing the smallest useful product framework | The idea has some signal, but the next product decision is still unclear | [product-shaping-skill](https://github.com/kiku-jw/product-shaping-skill) | Original by Kiku |
 | Product Council | Stress-testing high-impact product decisions | The main risk is in blind spots, conflicting lenses, or a fuzzy go/no-go call | [product-council](https://github.com/kiku-jw/product-council) | Original by Kiku |
 | Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [spec-bundle-skill](https://github.com/kiku-jw/spec-bundle-skill) | Inspired by [Sereja Ris](https://sereja.tech/) |
-| JustDoIt | Durable execution planning for non-trivial repo work | A task needs plan, status, and test-plan files before execution and another Codex run should be able to resume cleanly | [codex-skills/justdoit](https://github.com/kiku-jw/codex-skills/tree/main/justdoit) | Adapted from [serejaris/justdoit](https://github.com/serejaris/justdoit) |
+| JustDoIt | Durable execution planning for non-trivial repo work | A task needs sequence-first, issue-first plan, status, and test-plan files before execution and another Codex run should be able to resume cleanly | [codex-skills/justdoit](https://github.com/kiku-jw/codex-skills/tree/main/justdoit) | Adapted from [serejaris/justdoit](https://github.com/serejaris/justdoit) |
 | Execution Pack | Turning a PRD into a durable Codex operating pack | Codex needs AGENTS.md, plan, status, tests, backlog, and reusable execution prompts for multi-session work | [codex-execution-pack](https://github.com/kiku-jw/codex-execution-pack) | Original by Kiku |
-| AGX Orchestrator | Bounded execution routing with durable task packets | Codex should keep planning and final judgment, but one narrow execution slice should run through a durable external lane with explicit paths and verification | [agx-core/agx-orchestrator](https://github.com/kiku-jw/agx-core/tree/main/skills/agx-orchestrator) | Inspired by [Sereja Ris](https://sereja.tech/) and [AI Corp](https://ai-corp.sereja.tech/) |
+| AGX Orchestrator | Optional bounded outside lane for Codex-first work | Codex should keep planning and final judgment, and a narrow helper or skeptical review slice may go through AGX with explicit paths and verification | [agx-core/agx-orchestrator](https://github.com/kiku-jw/agx-core/tree/main/skills/agx-orchestrator) | Inspired by [Sereja Ris](https://sereja.tech/) and [AI Corp](https://ai-corp.sereja.tech/) |
 | Triage Finding | Fact-checking and usefulness triage for outside finds | You found a post, repo, article, screenshot, video, or saved note and need to know whether it matters now or is already covered locally | [triage-finding](https://github.com/kiku-jw/triage-finding) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/triage-finding) |
 | Tool Scout | Multi-source research for build-vs-buy decisions | You want current options before building or buying the wrong thing and need GitHub, MCP, awesome-list, and web signals instead of one-source vibes | [tool-scout](https://github.com/kiku-jw/tool-scout) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/tool-scout) |
 | ADR Log | Capturing architecture decisions and trade-offs | A stack, schema, workflow, or vendor choice needs durable rationale | [adr-log](https://github.com/kiku-jw/adr-log) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/adr) |
-| Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs durable issue state, deterministic handoff, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) | Inspired by [Sereja Ris](https://sereja.tech/) and [AI Corp](https://ai-corp.sereja.tech/) |
+| Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs issue-first execution order, deterministic scaffolds, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) | Inspired by [Sereja Ris](https://sereja.tech/) and [AI Corp](https://ai-corp.sereja.tech/) |
+| Codex Autonomous Delivery | Codex-first execution lane with issue-first flow | One main Codex lane should take work from PRD or request through issue, plan, execution, verification, and optional AGX review | [superpowers/codex-autonomous-delivery](https://github.com/kiku-jw/superpowers/tree/main/skills/codex-autonomous-delivery) | Original by Kiku |
 | GitHub Mobile Ops | Phone-first GitHub operator workflow | You want Issues, Projects, and GitHub Mobile to act as a real control surface from the phone | [codex-skills/github-mobile-ops](https://github.com/kiku-jw/codex-skills/tree/main/github-mobile-ops) | Original by Kiku |
 | Continuity Ledger | Keeping substantial work coherent across sessions | The work is long-running and chat memory is not a safe source of truth | [continuity-ledger-skill](https://github.com/kiku-jw/continuity-ledger-skill) | Original by Kiku |
 | Adversarial Review | Skeptical second-pass review for risky diffs | A meaningful diff needs a findings-first pass focused on bugs, regressions, security, and missing tests | [codex-skills/adversarial-review](https://github.com/kiku-jw/codex-skills/tree/main/adversarial-review) | Original by Kiku |
@@ -183,8 +185,10 @@ Inspiration note:
 The public Kiku version is an adaptation of Sereja Ris's standalone [`justdoit`](https://github.com/serejaris/justdoit) skill, then rewritten into the current harness and routing setup.
 
 What it does:
+- runs `issue-control-loop sequence` first when the real question is what should happen after what
 - chooses or creates the right plan, status, and test-plan files
 - normalizes scope, constraints, assumptions, risks, and validation commands
+- treats the GitHub issue as the primary execution surface when GitHub is available
 - ends with a short ready-to-execute handoff instead of a vague planning essay
 
 Good use cases:
@@ -225,12 +229,13 @@ This skill is original in implementation, but its layer-first routing and explic
 
 What it does:
 - keeps planning, architecture, and final acceptance in Codex
+- treats AGX as an optional bounded outside lane instead of the default execution plane
 - dispatches only narrow execution packets with explicit `allowed_paths`
 - requires local verification before treating a worker result as real
 - stores the execution lane as a durable task/run artifact instead of chat-only memory
 
 Good use cases:
-- Codex should keep judgment, but one code or review slice is narrow enough to dispatch safely.
+- Codex should keep judgment, but one helper or skeptical review slice is narrow enough to dispatch safely.
 - You want an execution lane with saved packets, saved results, and explicit path scope.
 - The task is ready for execution, but you do not want private proxy or operator-surface assumptions in the public workflow.
 
@@ -317,8 +322,9 @@ This skill is directly shaped by Sereja Ris's GitHub-as-memory patterns and the 
 What it does:
 - keeps the issue canonical instead of letting task state dissolve into chat
 - makes machine state explicit via marker comments and deterministic parsing
-- includes PRD intake and work-shaping primitives so the issue can become a clean handoff point
+- includes PRD intake, work-shaping, and ordered execution sequencing so the issue can become a clean handoff point
 - keeps Projects as the board lens instead of duplicating canonical task meaning
+- can emit ready-to-use issue, plan, status, and test-plan scaffolds from one command
 
 Good use cases:
 - You want GitHub Issue plus Project to become the real control layer for execution.
@@ -329,6 +335,26 @@ Typical prompts:
 - `Turn this GitHub issue into a clean control loop.`
 - `Use the issue as the canonical handoff surface.`
 - `Parse this PRD and make it issue-ready.`
+
+### [Codex Autonomous Delivery](https://github.com/kiku-jw/superpowers/tree/main/skills/codex-autonomous-delivery)
+
+Keep one main Codex lane responsible for the whole build.
+
+What it does:
+- keeps planning, implementation, and verification in one Codex-first lane
+- treats the PRD as living product truth, not direct execution input
+- prefers `issue-control-loop sequence` and GitHub issue first for substantial work
+- uses AGX only as an optional skeptical review or cheap helper lane
+
+Good use cases:
+- You want Codex to carry the work from request or PRD through execution and verification.
+- The task is substantial and should run from a canonical issue plus durable local mirrors.
+- You want outside help to stay optional and bounded rather than becoming a second control plane.
+
+Typical prompts:
+- `Use codex-autonomous-delivery for this feature.`
+- `Take this from PRD to issue to execution without leaving Codex.`
+- `Keep this Codex-first and use AGX only if a bounded review lane is worth it.`
 
 ### [GitHub Mobile Ops](https://github.com/kiku-jw/codex-skills/tree/main/github-mobile-ops)
 
