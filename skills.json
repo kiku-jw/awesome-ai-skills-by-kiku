@@ -467,6 +467,27 @@
     "origin_note": "Original public skill by Kiku."
   },
   {
+    "name": "Autonomous Video Pipeline",
+    "slug": "autonomous-video-pipeline",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/autonomous-video-pipeline",
+    "tagline": "Produce verified short-form video packages with manifests and QA evidence.",
+    "focus": "End-to-end explainer and avatar video production workflow",
+    "best_used_when": [
+      "A short-form explainer, avatar, tutorial, or YouTube-ready video needs more than a simple render script.",
+      "The work should track narration chunks, storyboard scenes, provider outputs, render commands, QA frames, and ffprobe evidence.",
+      "You need a provider-neutral workflow that can pause on paid APIs, cloned voices, private accounts, or upload-readiness risks."
+    ],
+    "typical_prompts": [
+      "Use autonomous-video-pipeline to produce a verified explainer video package.",
+      "Create the production contract, storyboard, render manifest, and QA plan for this video.",
+      "Build a local placeholder MP4 package and validate it before we call paid providers."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
     "name": "Browser Tutorial Video",
     "slug": "browser-tutorial-video",
     "repo": "https://github.com/kiku-jw/codex-skills/tree/main/browser-tutorial-video",

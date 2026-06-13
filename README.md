@@ -75,6 +75,7 @@ Some public skills now live inside multi-skill repos. When that is the case, the
 | README Generator | Creating a human-first repo front page | A repo needs a clear README with real quick start, useful taxonomy, and less doc bloat | [readme-generator-skill](https://github.com/kiku-jw/readme-generator-skill) | Original by Kiku |
 | Session to Post | Turning real coding work into a durable draft | A meaningful coding session is done and you want a build diary, post seed, or end-of-session writeup from the real artifacts | [session-to-post](https://github.com/kiku-jw/session-to-post) | Inspired by [serejaris/blog-pipeline-template](https://github.com/serejaris/blog-pipeline-template) |
 | Video Builder | Assemble narrated videos from scripts | You need a repeatable pipeline to render a narrated mp4 with TTS and simple visuals | [video-builder-skill](https://github.com/kiku-jw/video-builder-skill) | Original by Kiku |
+| Autonomous Video Pipeline | Verified short-form video production packages | A short-form explainer, avatar, tutorial, or YouTube-ready video needs manifests, scene planning, provider adapters, ffprobe metadata, QA frames, and final package validation | [codex-skills/autonomous-video-pipeline](https://github.com/kiku-jw/codex-skills/tree/main/autonomous-video-pipeline) | Original by Kiku |
 | Browser Tutorial Video | Recording polished browser walkthrough MP4s | A browser workflow, app tutorial, PDF scroll, or localized demo needs cursor highlights, click audio, smooth capture, and ffmpeg verification | [codex-skills/browser-tutorial-video](https://github.com/kiku-jw/codex-skills/tree/main/browser-tutorial-video) | Original by Kiku |
 
 ## Detailed Skill Notes
@@ -554,6 +555,38 @@ Typical prompts:
 - `Render a 2-minute explainer with edge-tts voiceover.`
 - `Assemble an mp4 from these lines and images.`
 
+### [Autonomous Video Pipeline](https://github.com/kiku-jw/codex-skills/tree/main/autonomous-video-pipeline)
+
+Produce a verified short-form video package from source material instead of
+stopping at a script, rough render, or provider-specific prompt.
+
+What it does:
+- Pins the production contract, source ledger, budget, authorization boundary,
+  and stop condition.
+- Creates a project manifest for script chunks, storyboard scenes, provider
+  outputs, render commands, QA reports, and residual limitations.
+- Splits narration into stable TTS/avatar chunks.
+- Requires a storyboard and scene manifest before expensive media generation.
+- Keeps TTS, avatar, browser, stock media, and motion graphics steps as
+  replaceable provider adapters.
+- Verifies the final MP4 with ffprobe metadata, extracted QA frames, and package
+  validation before upload-readiness claims.
+
+Good use cases:
+- A YouTube-ready explainer needs a reproducible production folder, not just a
+  one-off model response.
+- Paid APIs, cloned voices, avatars, or private provider accounts require
+  explicit pause points and authorization checks.
+- Motion graphics must line up with narration and remain inspectable through QA
+  frames.
+- A local placeholder render should prove the pipeline before expensive
+  provider calls.
+
+Typical prompts:
+- `Use autonomous-video-pipeline to produce a verified explainer video package.`
+- `Create the production contract, storyboard, render manifest, and QA plan for this video.`
+- `Build a local placeholder MP4 package and validate it before we call paid providers.`
+
 ### [Browser Tutorial Video](https://github.com/kiku-jw/codex-skills/tree/main/browser-tutorial-video)
 
 Record a real browser workflow as a polished tutorial MP4 instead of turning it
@@ -597,6 +630,7 @@ Typical prompts:
 - Use Illustration Prompt when the real problem is visual direction and reference interpretation, not image generation itself.
 - Use README Generator when the repo needs a clear public entry point more than deeper internal docs.
 - Use Session to Post when the work is already real and you want a durable writeup from the session artifacts.
+- Use Autonomous Video Pipeline when the output should be a verified short-form video package with a manifest, storyboard, render metadata, QA frames, and explicit provider boundaries.
 - Use Browser Tutorial Video when the output should be an actual polished browser walkthrough MP4.
 
 ## Machine-readable index
