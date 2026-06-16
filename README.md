@@ -36,7 +36,7 @@ Workflow extensions:
 - `Illustration Prompt` when vague image requests need structure, references, and generator-ready precision.
 - `README Generator` when a repo needs a truthful front page instead of internal-doc sprawl.
 - `Session to Post` when the work is done and needs a durable writeup.
-- `Browser Tutorial Video` when a real browser workflow should become a polished MP4 with cursor highlights, click audio, and QA frames.
+- `Browser Tutorial Video` when a real browser workflow should become a repeatable polished MP4 with job specs, cursor highlights, click audio, and QA frames.
 
 ## Attribution Policy
 
@@ -76,7 +76,7 @@ Some public skills now live inside multi-skill repos. When that is the case, the
 | Session to Post | Turning real coding work into a durable draft | A meaningful coding session is done and you want a build diary, post seed, or end-of-session writeup from the real artifacts | [session-to-post](https://github.com/kiku-jw/session-to-post) | Inspired by [serejaris/blog-pipeline-template](https://github.com/serejaris/blog-pipeline-template) |
 | Video Builder | Assemble narrated videos from scripts | You need a repeatable pipeline to render a narrated mp4 with TTS and simple visuals | [video-builder-skill](https://github.com/kiku-jw/video-builder-skill) | Original by Kiku |
 | Autonomous Video Pipeline | Verified short-form video production packages | A short-form explainer, avatar, tutorial, or YouTube-ready video needs manifests, scene planning, provider adapters, ffprobe metadata, QA frames, and final package validation | [codex-skills/autonomous-video-pipeline](https://github.com/kiku-jw/codex-skills/tree/main/autonomous-video-pipeline) | Original by Kiku |
-| Browser Tutorial Video | Recording polished browser walkthrough MP4s | A browser workflow, app tutorial, PDF scroll, or localized demo needs cursor highlights, click audio, smooth capture, QA frames, and ffmpeg verification | [codex-skills/browser-tutorial-video](https://github.com/kiku-jw/codex-skills/tree/main/browser-tutorial-video) | Original by Kiku |
+| Browser Tutorial Video | Recording repeatable browser walkthrough MP4s | A browser workflow, app tutorial, PDF scroll, or localized demo needs a reusable job spec, cursor highlights, click audio, smooth capture, QA frames, and ffmpeg verification | [codex-skills/browser-tutorial-video](https://github.com/kiku-jw/codex-skills/tree/main/browser-tutorial-video) | Original by Kiku |
 
 ## Detailed Skill Notes
 
@@ -593,6 +593,8 @@ Record a real browser workflow as a polished tutorial MP4 instead of turning it
 into a SaaS product.
 
 What it does:
+- Defines repeatable tutorial job specs for browser walkthroughs.
+- Includes scaffold and generic runner scripts for simple selector/text/scroll jobs.
 - Drives browser navigation with Playwright.
 - Injects a large cursor, target highlights, and click ripples.
 - Keeps cursor position stable across navigation.
@@ -604,11 +606,13 @@ What it does:
 Good use cases:
 - You need a product walkthrough or support tutorial without opening a video editor.
 - The same browser flow needs localized or repeated variants.
+- A simple page can be rendered from a reusable job file before custom recorder code is needed.
 - A PDF or long page must be scrolled smoothly in the final recording.
 - Click targets should be highlighted before the cursor reaches them.
 
 Typical prompts:
 - `Record this browser walkthrough as a polished tutorial video.`
+- `Create a reusable tutorial job spec and render a smoke MP4.`
 - `Make localized demo videos for these URLs.`
 - `Capture this PDF scroll with cursor highlights and click audio.`
 - `Generate QA frames and a contact sheet for this walkthrough video.`
