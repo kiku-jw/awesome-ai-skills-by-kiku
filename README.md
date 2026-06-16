@@ -21,6 +21,7 @@ Workflow extensions:
 - `Product Council` when one perspective is not enough and the risk is in blind spots.
 - `Triage Finding` when an external link, repo, screenshot, or post needs an honest usefulness verdict.
 - `Tool Scout` when build-vs-buy is open and current ecosystem research matters.
+- `Lazy Senior` when Codex is about to add dependencies, parsers, widgets, wrappers, or reusable code and should prove the smaller path first.
 - `ADR Log` when a decision deserves durable rationale and trade-off capture.
 - `JustDoIt` when a non-trivial repo task needs sequence-first, issue-first planning files before execution starts.
 - `Execution Pack` when Codex needs AGENTS, plan, status, tests, backlog, and resumable prompts instead of a loose spec.
@@ -62,6 +63,7 @@ Some public skills now live inside multi-skill repos. When that is the case, the
 | AGX Orchestrator | Optional bounded outside lane for Codex-first work | Codex should keep planning and final judgment, and a narrow helper or skeptical review slice may go through AGX with explicit paths and verification | [agx-core/agx-orchestrator](https://github.com/kiku-jw/agx-core/tree/main/skills/agx-orchestrator) | Inspired by [Sereja Ris](https://sereja.tech/) and [AI Corp](https://ai-corp.sereja.tech/) |
 | Triage Finding | Fact-checking and usefulness triage for outside finds | You found a post, repo, article, screenshot, video, or saved note and need to know whether it matters now or is already covered locally | [triage-finding](https://github.com/kiku-jw/triage-finding) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/triage-finding) |
 | Tool Scout | Multi-source research for build-vs-buy decisions | You want current options before building or buying the wrong thing and need GitHub, MCP, awesome-list, and web signals instead of one-source vibes | [tool-scout](https://github.com/kiku-jw/tool-scout) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/tool-scout) |
+| Lazy Senior | Anti-overengineering code planning, review, and audit | Codex is about to add a dependency, parser, widget, wrapper, CLI, cache, queue, scheduler, state machine, or reusable helper | [codex-skills/lazy-senior](https://github.com/kiku-jw/codex-skills/tree/main/lazy-senior) | Inspired by [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) |
 | ADR Log | Capturing architecture decisions and trade-offs | A stack, schema, workflow, or vendor choice needs durable rationale | [adr-log](https://github.com/kiku-jw/adr-log) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/adr) |
 | Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs issue-first execution order, deterministic scaffolds, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) | Inspired by [Sereja Ris](https://sereja.tech/) and [AI Corp](https://ai-corp.sereja.tech/) |
 | Codex Autonomous Delivery | Codex-first execution lane with issue-first flow | One main Codex lane should take work from PRD or request through issue, plan, execution, verification, and optional AGX review | [superpowers/codex-autonomous-delivery](https://github.com/kiku-jw/superpowers/tree/main/skills/codex-autonomous-delivery) | Original by Kiku |
@@ -294,6 +296,31 @@ Typical prompts:
 - `What should we use for X?`
 - `Is there an MCP for this?`
 - `Find a Python library for PDF generation.`
+
+### [Lazy Senior](https://github.com/kiku-jw/codex-skills/tree/main/lazy-senior)
+
+Make agents prove the smaller path before adding code.
+
+Inspiration note:
+Inspired by [Ponytail](https://github.com/DietrichGebert/ponytail), then adapted for Codex with visible decision receipts, GitHub prior-art checks, bounded read-only worker escalation, audit/status scripts, and strict benchmark gates.
+
+What it does:
+- challenges whether a feature needs to exist before designing it
+- prefers deletion, standard library, native platform APIs, installed dependencies, one-liners, and tiny local code before custom implementations
+- requires evidence when GitHub prior art is used
+- reviews diffs and scans repos for overengineering candidates
+- keeps activation lightweight instead of installing broad blocking hooks
+
+Good use cases:
+- Codex is about to add a dependency, parser, widget, wrapper, CLI, cache, queue, scheduler, state machine, or reusable helper.
+- A diff feels larger than the task deserves.
+- You want a compact receipt explaining why custom code is actually needed.
+
+Typical prompts:
+- `Use lazy-senior before implementing this.`
+- `Review this diff for overengineering.`
+- `Is there already a GitHub solution or architecture we should borrow?`
+- `What is the smallest correct version of this feature?`
 
 ### [ADR Log](https://github.com/kiku-jw/adr-log)
 

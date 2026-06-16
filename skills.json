@@ -214,6 +214,29 @@
     "origin_note": "Codex-focused rewrite of the upstream Claude skill from alenazaharovaux/share."
   },
   {
+    "name": "Lazy Senior",
+    "slug": "lazy-senior",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/lazy-senior",
+    "tagline": "Make agents prove the smaller path before adding code.",
+    "focus": "Anti-overengineering code planning, review, and audit",
+    "best_used_when": [
+      "Codex is about to add a dependency, parser, widget, wrapper, CLI, cache, queue, scheduler, state machine, or reusable helper.",
+      "You want a visible receipt for why custom code is necessary.",
+      "A diff needs a smaller-path review before commit or publication.",
+      "GitHub prior art should be checked before inventing a non-trivial implementation."
+    ],
+    "typical_prompts": [
+      "Use lazy-senior before implementing this.",
+      "Review this diff for overengineering.",
+      "Is there already a GitHub solution or architecture we should borrow?",
+      "What is the smallest correct version of this feature?"
+    ],
+    "origin_type": "inspired",
+    "origin_author": "Dietrich Gebert",
+    "origin_repo": "https://github.com/DietrichGebert/ponytail",
+    "origin_note": "Inspired by Ponytail's anti-overengineering posture. This Codex skill adds evidence-backed GitHub prior-art checks, bounded read-only worker escalation, audit/status scripts, and strict benchmark gates."
+  },
+  {
     "name": "ADR Log",
     "slug": "adr-log",
     "repo": "https://github.com/kiku-jw/adr-log",
