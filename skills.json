@@ -491,17 +491,19 @@
     "name": "Browser Tutorial Video",
     "slug": "browser-tutorial-video",
     "repo": "https://github.com/kiku-jw/codex-skills/tree/main/browser-tutorial-video",
-    "tagline": "Record polished browser walkthrough MP4s with Playwright and ffmpeg.",
-    "focus": "Browser tutorial video recording with cursor highlights and click audio",
+    "tagline": "Record and verify polished browser walkthrough MP4s.",
+    "focus": "Browser tutorial video recording with cursor highlights, click audio, QA frames, and ffmpeg",
     "best_used_when": [
       "A browser workflow, app tutorial, or PDF scroll should become a real MP4 artifact.",
       "The output needs large cursor movement, early target highlights, click ripples, and click sound.",
-      "Localized or repeated variants should be rendered without manual video editing."
+      "Localized or repeated variants should be rendered without manual video editing.",
+      "A finished walkthrough needs QA frames, contact sheets, and metadata checks before sign-off."
     ],
     "typical_prompts": [
       "Record this browser walkthrough as a polished tutorial video.",
       "Make localized demo videos for these URLs.",
-      "Capture this PDF scroll with cursor highlights and click audio."
+      "Capture this PDF scroll with cursor highlights and click audio.",
+      "Generate QA frames and a contact sheet for this walkthrough video."
     ],
     "origin_type": "original",
     "origin_author": "Kiku",

@@ -76,7 +76,7 @@ Some public skills now live inside multi-skill repos. When that is the case, the
 | Session to Post | Turning real coding work into a durable draft | A meaningful coding session is done and you want a build diary, post seed, or end-of-session writeup from the real artifacts | [session-to-post](https://github.com/kiku-jw/session-to-post) | Inspired by [serejaris/blog-pipeline-template](https://github.com/serejaris/blog-pipeline-template) |
 | Video Builder | Assemble narrated videos from scripts | You need a repeatable pipeline to render a narrated mp4 with TTS and simple visuals | [video-builder-skill](https://github.com/kiku-jw/video-builder-skill) | Original by Kiku |
 | Autonomous Video Pipeline | Verified short-form video production packages | A short-form explainer, avatar, tutorial, or YouTube-ready video needs manifests, scene planning, provider adapters, ffprobe metadata, QA frames, and final package validation | [codex-skills/autonomous-video-pipeline](https://github.com/kiku-jw/codex-skills/tree/main/autonomous-video-pipeline) | Original by Kiku |
-| Browser Tutorial Video | Recording polished browser walkthrough MP4s | A browser workflow, app tutorial, PDF scroll, or localized demo needs cursor highlights, click audio, smooth capture, and ffmpeg verification | [codex-skills/browser-tutorial-video](https://github.com/kiku-jw/codex-skills/tree/main/browser-tutorial-video) | Original by Kiku |
+| Browser Tutorial Video | Recording polished browser walkthrough MP4s | A browser workflow, app tutorial, PDF scroll, or localized demo needs cursor highlights, click audio, smooth capture, QA frames, and ffmpeg verification | [codex-skills/browser-tutorial-video](https://github.com/kiku-jw/codex-skills/tree/main/browser-tutorial-video) | Original by Kiku |
 
 ## Detailed Skill Notes
 
@@ -598,7 +598,8 @@ What it does:
 - Keeps cursor position stable across navigation.
 - Captures smooth frames, handles PDF scrolls, mixes click audio, and renders
   with ffmpeg.
-- Verifies the MP4 with metadata and extracted QA frames.
+- Verifies the MP4 with metadata, extracted QA frames, contact sheets, and
+  browser-specific manual checks.
 
 Good use cases:
 - You need a product walkthrough or support tutorial without opening a video editor.
@@ -610,6 +611,7 @@ Typical prompts:
 - `Record this browser walkthrough as a polished tutorial video.`
 - `Make localized demo videos for these URLs.`
 - `Capture this PDF scroll with cursor highlights and click audio.`
+- `Generate QA frames and a contact sheet for this walkthrough video.`
 
 ## How to use this list
 
