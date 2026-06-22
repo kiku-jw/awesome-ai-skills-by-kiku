@@ -38,6 +38,11 @@ Workflow extensions:
 - `README Generator` when a repo needs a truthful front page instead of internal-doc sprawl.
 - `Session to Post` when the work is done and needs a durable writeup.
 - `Browser Tutorial Video` when a real browser workflow should become a repeatable polished MP4 with job specs, cursor highlights, click audio, and QA frames.
+- `Long Context Dispatch` when a large read-only analysis genuinely needs a bigger context window while Codex keeps judgment.
+- `Parallel Worktrees` when substantial work has separable lanes that should not contaminate the main checkout.
+- `Playwright` when terminal-driven browser navigation, snapshots, screenshots, extraction, or UI debugging is the work.
+- `Transcribe` when audio or video needs a transcript, with diarization only when speaker labels are actually needed.
+- `Spreadsheet` when tabular analysis or workbook-preserving `.xlsx` edits need a reproducible execution lane.
 
 ## Attribution Policy
 
@@ -79,6 +84,11 @@ Some public skills now live inside multi-skill repos. When that is the case, the
 | Video Builder | Assemble narrated videos from scripts | You need a repeatable pipeline to render a narrated mp4 with TTS and simple visuals | [video-builder-skill](https://github.com/kiku-jw/video-builder-skill) | Original by Kiku |
 | Autonomous Video Pipeline | Verified short-form video production packages | A short-form explainer, avatar, tutorial, or YouTube-ready video needs manifests, scene planning, provider adapters, ffprobe metadata, QA frames, and final package validation | [codex-skills/autonomous-video-pipeline](https://github.com/kiku-jw/codex-skills/tree/main/autonomous-video-pipeline) | Original by Kiku |
 | Browser Tutorial Video | Recording repeatable browser walkthrough MP4s | A browser workflow, app tutorial, PDF scroll, or localized demo needs a reusable job spec, cursor highlights, click audio, smooth capture, QA frames, and ffmpeg verification | [codex-skills/browser-tutorial-video](https://github.com/kiku-jw/codex-skills/tree/main/browser-tutorial-video) | Original by Kiku |
+| Long Context Dispatch | Read-only large-context analysis delegation | A large audit, synthesis, due-diligence pass, or cross-document analysis genuinely needs a bigger context window while the parent Codex thread keeps final judgment | [codex-skills/long-context-dispatch](https://github.com/kiku-jw/codex-skills/tree/main/long-context-dispatch) | Original by Kiku |
+| Parallel Worktrees | Isolated git lanes for substantial work | Implementation, tests, docs, review, or experiments should proceed in separate worktrees without contaminating the main checkout | [codex-skills/parallel-worktrees](https://github.com/kiku-jw/codex-skills/tree/main/parallel-worktrees) | Original by Kiku |
+| Playwright | CLI-first browser automation and UI inspection | A task needs terminal-driven navigation, snapshots, screenshots, form interaction, extraction, or UI-flow debugging without becoming a Playwright test suite | [codex-skills/playwright](https://github.com/kiku-jw/codex-skills/tree/main/playwright) | Original by Kiku |
+| Transcribe | Audio and video transcription routing | Audio or video needs a fast transcript, diarized speaker labels, or repeatable transcript artifacts without leaking API keys into chat | [transcribe-skill](https://github.com/kiku-jw/transcribe-skill) | Original by Kiku |
+| Spreadsheet | Spreadsheet analysis and workbook-safe editing | CSV, TSV, or workbook work needs explicit transformations, checked row counts, preserved formulas, or `.xlsx` layout-aware edits | [spreadsheet-skill](https://github.com/kiku-jw/spreadsheet-skill) | Original by Kiku |
 
 ## Detailed Skill Notes
 
@@ -644,6 +654,106 @@ Typical prompts:
 - `Capture this PDF scroll with cursor highlights and click audio.`
 - `Generate QA frames and a contact sheet for this walkthrough video.`
 
+### [Long Context Dispatch](https://github.com/kiku-jw/codex-skills/tree/main/long-context-dispatch)
+
+Delegate a large read-only analysis to a long-context worker while the parent Codex thread stays in control.
+
+What it does:
+- gates whether the task really needs a larger context window
+- launches a read-only worker with explicit scope, reason, and working directory
+- saves job artifacts and synthesizes the result back into the parent thread
+- keeps editing decisions, verification, and final judgment in Codex
+
+Good use cases:
+- A repo audit or document synthesis is too large for the current thread.
+- A due-diligence pass needs cross-file or cross-document connections.
+- You want a helper analysis lane, but not a second control plane.
+
+Typical prompts:
+- `Use long-context-dispatch for this repo audit.`
+- `Send this large read-only analysis to the long-context worker.`
+- `Keep judgment here, but delegate the big synthesis pass.`
+
+### [Parallel Worktrees](https://github.com/kiku-jw/codex-skills/tree/main/parallel-worktrees)
+
+Split substantial work into isolated git worktrees when there are real separable lanes.
+
+What it does:
+- creates dedicated worktrees on dedicated `codex/` branches
+- separates implementation, tests, docs, review, or experiments when that reduces contamination
+- requires one shared source of truth for decisions across lanes
+- makes lane cleanup explicit instead of accidental
+
+Good use cases:
+- A substantial change has independent implementation and verification lanes.
+- An experiment should not dirty the main checkout.
+- Multiple agents or sessions need clear branch and path ownership.
+
+Typical prompts:
+- `Use parallel worktrees for this.`
+- `Split implementation and review into separate worktrees.`
+- `Create isolated lanes for this risky experiment.`
+
+### [Playwright](https://github.com/kiku-jw/codex-skills/tree/main/playwright)
+
+Drive a real browser from the terminal with snapshots and stable element refs.
+
+What it does:
+- opens pages, captures accessibility snapshots, and interacts through fresh refs
+- supports navigation, form filling, screenshots, extraction, and UI-flow debugging
+- keeps the workflow CLI-first instead of silently turning every task into test code
+- requires new snapshots after navigation, modal changes, or other DOM shifts
+
+Good use cases:
+- You need to inspect a live UI or reproduce a browser flow.
+- A web task depends on current DOM state rather than static source files.
+- You want browser evidence without writing a full Playwright test suite.
+
+Typical prompts:
+- `Use Playwright to inspect this page.`
+- `Click through this flow and capture evidence.`
+- `Extract the current table from this web UI.`
+
+### [Transcribe](https://github.com/kiku-jw/transcribe-skill)
+
+Route audio and video transcription into the smallest honest transcript workflow.
+
+What it does:
+- uses fast plain transcription by default
+- switches to diarized output only when speaker labels are needed
+- keeps API keys in environment variables, never in chat or committed files
+- saves repeatable transcript artifacts with a short quality note
+
+Good use cases:
+- You need text from an audio or video file.
+- Speaker labels matter enough to justify diarization.
+- A recurring transcript workflow should be reproducible instead of one-off.
+
+Typical prompts:
+- `Transcribe this audio file.`
+- `Transcribe this video with speaker labels.`
+- `Save a clean transcript artifact for this recording.`
+
+### [Spreadsheet](https://github.com/kiku-jw/spreadsheet-skill)
+
+Route spreadsheet work into either tabular analysis or workbook-safe editing.
+
+What it does:
+- chooses tabular analysis for aggregation, filtering, joins, metrics, and reshaping
+- chooses `.xlsx` editing when formulas, formatting, references, and layout must be preserved
+- validates row counts, joins, formulas, and visible layout when relevant
+- avoids pretending that a flattened table edit preserved a workbook
+
+Good use cases:
+- CSV or TSV data needs reproducible analysis with checked outputs.
+- An `.xlsx` workbook needs targeted edits without breaking formulas or formatting.
+- A task starts as spreadsheet work but needs the correct lane before editing.
+
+Typical prompts:
+- `Analyze this spreadsheet and export the summary.`
+- `Edit this workbook without breaking formulas.`
+- `Reshape this CSV and preserve source columns.`
+
 ## How to use this list
 
 - Start with Work Shaping if the real blocker is not code but the shape of the work.
@@ -665,6 +775,11 @@ Typical prompts:
 - Use Session to Post when the work is already real and you want a durable writeup from the session artifacts.
 - Use Autonomous Video Pipeline when the output should be a verified short-form video package with a manifest, storyboard, render metadata, QA frames, and explicit provider boundaries.
 - Use Browser Tutorial Video when the output should be an actual polished browser walkthrough MP4.
+- Use Long Context Dispatch when the bottleneck is read-only synthesis across too much material for the current thread.
+- Use Parallel Worktrees when substantial work has cleanly separable lanes and checkout isolation would reduce risk.
+- Use Playwright when a browser flow needs terminal-driven inspection, interaction, extraction, or screenshots.
+- Use Transcribe when audio or video should become a transcript artifact.
+- Use Spreadsheet when table analysis or workbook-preserving edits need a checked, reproducible lane.
 
 ## Machine-readable index
 

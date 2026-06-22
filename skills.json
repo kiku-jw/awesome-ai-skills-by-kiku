@@ -536,6 +536,111 @@
     "origin_note": "Original public skill by Kiku."
   },
   {
+    "name": "Long Context Dispatch",
+    "slug": "long-context-dispatch",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/long-context-dispatch",
+    "tagline": "Delegate large read-only analysis while Codex keeps final judgment.",
+    "focus": "Read-only large-context analysis delegation",
+    "best_used_when": [
+      "A repo audit, due-diligence pass, literature synthesis, or policy mapping genuinely needs a larger context window.",
+      "The parent Codex thread should keep synthesis, editing decisions, and final judgment.",
+      "The child analysis must stay read-only and scoped to explicit paths or documents."
+    ],
+    "typical_prompts": [
+      "Use long-context-dispatch for this repo audit.",
+      "Send this large read-only analysis to the long-context worker.",
+      "Keep judgment here, but delegate the big synthesis pass."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Parallel Worktrees",
+    "slug": "parallel-worktrees",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/parallel-worktrees",
+    "tagline": "Split substantial work into isolated git worktree lanes.",
+    "focus": "Isolated git lanes for substantial multi-track work",
+    "best_used_when": [
+      "A substantial task has separable implementation, tests, docs, review, or experiment lanes.",
+      "The main checkout should stay clean while risky or independent work proceeds.",
+      "Multiple agents or sessions need explicit branch and path ownership."
+    ],
+    "typical_prompts": [
+      "Use parallel worktrees for this.",
+      "Split implementation and review into separate worktrees.",
+      "Create isolated lanes for this risky experiment."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Playwright",
+    "slug": "playwright",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/playwright",
+    "tagline": "Drive browser flows from the terminal with snapshots and stable refs.",
+    "focus": "CLI-first browser automation, extraction, screenshots, and UI-flow debugging",
+    "best_used_when": [
+      "A task needs current browser state, DOM snapshots, screenshots, form interaction, or data extraction.",
+      "You need UI-flow debugging without immediately writing a Playwright test suite.",
+      "Stable element refs and fresh snapshots are safer than ad hoc DOM poking."
+    ],
+    "typical_prompts": [
+      "Use Playwright to inspect this page.",
+      "Click through this flow and capture evidence.",
+      "Extract the current table from this web UI."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Transcribe",
+    "slug": "transcribe",
+    "repo": "https://github.com/kiku-jw/transcribe-skill",
+    "tagline": "Route audio and video transcription into the smallest honest lane.",
+    "focus": "Audio and video transcription with optional diarized speaker labels",
+    "best_used_when": [
+      "Audio or video needs a clean transcript artifact.",
+      "Speaker labels, diarization, or known-speaker hints are required.",
+      "The workflow should keep API keys in environment variables and save repeatable outputs."
+    ],
+    "typical_prompts": [
+      "Transcribe this audio file.",
+      "Transcribe this video with speaker labels.",
+      "Save a clean transcript artifact for this recording."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/transcribe-skill",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Spreadsheet",
+    "slug": "spreadsheet",
+    "repo": "https://github.com/kiku-jw/spreadsheet-skill",
+    "tagline": "Route spreadsheet work into tabular analysis or workbook-safe editing.",
+    "focus": "Spreadsheet analysis, reshaping, and `.xlsx` editing with validation",
+    "best_used_when": [
+      "CSV or TSV data needs aggregation, filtering, joins, metrics, or reshaping with checked outputs.",
+      "An `.xlsx` workbook needs targeted edits while preserving formulas, formatting, references, and layout.",
+      "The task needs an explicit lane before analysis accidentally breaks workbook semantics."
+    ],
+    "typical_prompts": [
+      "Analyze this spreadsheet and export the summary.",
+      "Edit this workbook without breaking formulas.",
+      "Reshape this CSV and preserve source columns."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/spreadsheet-skill",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
     "name": "Codex Autonomous Delivery",
     "slug": "codex-autonomous-delivery",
     "repo": "https://github.com/kiku-jw/superpowers/tree/main/skills/codex-autonomous-delivery",
