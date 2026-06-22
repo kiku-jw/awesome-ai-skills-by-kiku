@@ -578,27 +578,6 @@
     "origin_note": "Original public skill by Kiku."
   },
   {
-    "name": "Playwright",
-    "slug": "playwright",
-    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/playwright",
-    "tagline": "Drive browser flows from the terminal with snapshots and stable refs.",
-    "focus": "CLI-first browser automation, extraction, screenshots, and UI-flow debugging",
-    "best_used_when": [
-      "A task needs current browser state, DOM snapshots, screenshots, form interaction, or data extraction.",
-      "You need UI-flow debugging without immediately writing a Playwright test suite.",
-      "Stable element refs and fresh snapshots are safer than ad hoc DOM poking."
-    ],
-    "typical_prompts": [
-      "Use Playwright to inspect this page.",
-      "Click through this flow and capture evidence.",
-      "Extract the current table from this web UI."
-    ],
-    "origin_type": "original",
-    "origin_author": "Kiku",
-    "origin_repo": "https://github.com/kiku-jw/codex-skills",
-    "origin_note": "Original public skill by Kiku."
-  },
-  {
     "name": "Transcribe",
     "slug": "transcribe",
     "repo": "https://github.com/kiku-jw/transcribe-skill",

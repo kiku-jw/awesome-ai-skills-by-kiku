@@ -40,7 +40,6 @@ Workflow extensions:
 - `Browser Tutorial Video` when a real browser workflow should become a repeatable polished MP4 with job specs, cursor highlights, click audio, and QA frames.
 - `Long Context Dispatch` when a large read-only analysis genuinely needs a bigger context window while Codex keeps judgment.
 - `Parallel Worktrees` when substantial work has separable lanes that should not contaminate the main checkout.
-- `Playwright` when terminal-driven browser navigation, snapshots, screenshots, extraction, or UI debugging is the work.
 - `Transcribe` when audio or video needs a transcript, with diarization only when speaker labels are actually needed.
 - `Spreadsheet` when tabular analysis or workbook-preserving `.xlsx` edits need a reproducible execution lane.
 
@@ -86,7 +85,6 @@ Some public skills now live inside multi-skill repos. When that is the case, the
 | Browser Tutorial Video | Recording repeatable browser walkthrough MP4s | A browser workflow, app tutorial, PDF scroll, or localized demo needs a reusable job spec, cursor highlights, click audio, smooth capture, QA frames, and ffmpeg verification | [codex-skills/browser-tutorial-video](https://github.com/kiku-jw/codex-skills/tree/main/browser-tutorial-video) | Original by Kiku |
 | Long Context Dispatch | Read-only large-context analysis delegation | A large audit, synthesis, due-diligence pass, or cross-document analysis genuinely needs a bigger context window while the parent Codex thread keeps final judgment | [codex-skills/long-context-dispatch](https://github.com/kiku-jw/codex-skills/tree/main/long-context-dispatch) | Original by Kiku |
 | Parallel Worktrees | Isolated git lanes for substantial work | Implementation, tests, docs, review, or experiments should proceed in separate worktrees without contaminating the main checkout | [codex-skills/parallel-worktrees](https://github.com/kiku-jw/codex-skills/tree/main/parallel-worktrees) | Original by Kiku |
-| Playwright | CLI-first browser automation and UI inspection | A task needs terminal-driven navigation, snapshots, screenshots, form interaction, extraction, or UI-flow debugging without becoming a Playwright test suite | [codex-skills/playwright](https://github.com/kiku-jw/codex-skills/tree/main/playwright) | Original by Kiku |
 | Transcribe | Audio and video transcription routing | Audio or video needs a fast transcript, diarized speaker labels, or repeatable transcript artifacts without leaking API keys into chat | [transcribe-skill](https://github.com/kiku-jw/transcribe-skill) | Original by Kiku |
 | Spreadsheet | Spreadsheet analysis and workbook-safe editing | CSV, TSV, or workbook work needs explicit transformations, checked row counts, preserved formulas, or `.xlsx` layout-aware edits | [spreadsheet-skill](https://github.com/kiku-jw/spreadsheet-skill) | Original by Kiku |
 
@@ -694,26 +692,6 @@ Typical prompts:
 - `Split implementation and review into separate worktrees.`
 - `Create isolated lanes for this risky experiment.`
 
-### [Playwright](https://github.com/kiku-jw/codex-skills/tree/main/playwright)
-
-Drive a real browser from the terminal with snapshots and stable element refs.
-
-What it does:
-- opens pages, captures accessibility snapshots, and interacts through fresh refs
-- supports navigation, form filling, screenshots, extraction, and UI-flow debugging
-- keeps the workflow CLI-first instead of silently turning every task into test code
-- requires new snapshots after navigation, modal changes, or other DOM shifts
-
-Good use cases:
-- You need to inspect a live UI or reproduce a browser flow.
-- A web task depends on current DOM state rather than static source files.
-- You want browser evidence without writing a full Playwright test suite.
-
-Typical prompts:
-- `Use Playwright to inspect this page.`
-- `Click through this flow and capture evidence.`
-- `Extract the current table from this web UI.`
-
 ### [Transcribe](https://github.com/kiku-jw/transcribe-skill)
 
 Route audio and video transcription into the smallest honest transcript workflow.
@@ -777,7 +755,6 @@ Typical prompts:
 - Use Browser Tutorial Video when the output should be an actual polished browser walkthrough MP4.
 - Use Long Context Dispatch when the bottleneck is read-only synthesis across too much material for the current thread.
 - Use Parallel Worktrees when substantial work has cleanly separable lanes and checkout isolation would reduce risk.
-- Use Playwright when a browser flow needs terminal-driven inspection, interaction, extraction, or screenshots.
 - Use Transcribe when audio or video should become a transcript artifact.
 - Use Spreadsheet when table analysis or workbook-preserving edits need a checked, reproducible lane.
 
